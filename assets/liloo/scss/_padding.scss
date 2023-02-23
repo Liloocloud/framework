@@ -1,0 +1,18 @@
+
+$paddings: (
+    "sm": ( "padding" : 5px ),
+    "md": ( "padding" : 12px ),
+    "lg": ( "padding" : 18px ),
+    "xl": ( "padding" : 22px ),
+    "xxl": ( "padding" : 30px ),
+);
+
+.ll-padding { padding: 20px; }
+@each $key, $value in $paddings {
+    .ll-padding-#{$key} {
+        @each $prop, $val in $value{
+            #{$prop} : $val;
+        }
+    }
+}
+

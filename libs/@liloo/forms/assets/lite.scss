@@ -1,0 +1,15 @@
+// Layout lite dos formulários
+
+
+[liloo-mode="dark"] {
+
+    liloo-form {
+        & input,
+        & textarea {
+            background-color: #232323 !important;
+            color: #fff !important;
+            border: 1px solid #191919 !important;
+        }
+    }
+
+}

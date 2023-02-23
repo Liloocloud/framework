@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando Mapa de Calor - Heatmap</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.21/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.21/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.21/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body id="mapa">
+
+    <div class="uk-container uk-padding-large" uk-viewport>
+        <div class="uk-card uk-card-default uk-padding uk-margin">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore in eos maiores nemo nam
+            molestiae
+            corrupti nulla odit quisquam. Rerum ipsa laborum commodi. Nemo fugit quaerat illum voluptatum pariatur.
+        </div>
+        <div class="uk-card uk-card-default uk-padding">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore in eos maiores nemo nam
+            molestiae
+            corrupti nulla odit quisquam. Rerum ipsa laborum commodi. Nemo fugit quaerat illum voluptatum pariatur.
+        </div>
+    </div>
+
+    <script src="./build/heatmap.js"></script>
+    <script>
+
+        // Instancia do objeto Heatmap
+        const heatmap = h337.create({
+            container: document.getElementById('mapa'),
+            radius: 25,
+            maxOpacity: .5,
+            minOpacity: 0,
+            blur: .75
+        })
+
+        // Valor de data a ser inserido no final
+        var data = []
+
+        // Monta os dados
+        function headEvent(event) {
+            return {
+                x: event.clientX,
+                y: event.clientY,
+                value: 2
+            }
+        }
+
+        // Monta o evento heatmap
+        function setEvent(data) {
+            heatmap.setData({
+                max: 10,
+                min: 1,
+                data: data
+            })
+        }
+
+        /**
+         * Obtem a posição x/y
+         * mouseover // Quando o mouse estiver sob o elemento
+         * mousedown // Quando preciona o botão do mouse
+         * mouseenter // Quando o mouse inicia sob um elemento
+         * mousemove // Enquando o mouse se move sob um elemento 
+         */
+        document.querySelector('#mapa').addEventListener('mousemove', (event) => {
+            data.push(headEvent(event))
+            setEvent(data)
+        })
+
+
+    </script>
+</body>
+</html>

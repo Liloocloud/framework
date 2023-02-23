@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./vendor/dropzone/dist/min/dropzone.min.css" />
+	<!-- <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />	 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/css/uikit.min.css" />
+
+	<style>
+		.dropzone .dz-preview .dz-remove {
+			background: #ef3f3f;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 600;
+			width: 30px;
+			height: 30px;
+			border-radius: 100px;
+			text-decoration: none !important;
+			position: absolute;
+			top: -8px;
+			right: -8px;
+			z-index: 100;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script> -->
+	<script src="./vendor/dropzone/dist/dropzone.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/js/uikit-icons.min.js"></script>
+
+</head>
+
+<body>
+
+
+	<div class="uk-container uk-padding">
+		<div class="callback"></div>
+
+		<div class="uk-card uk-card-default uk-card-body uk-margin">
+			<form class="dropzone" id="LilooDropzone" accept-charset="utf-8" enctype="multipart/form-data">
+				<div class="fallback">
+					<input name="liloo_file_uploads" type="file" multiple />
+				</div>
+			</form>
+			<button class="uk-button uk-button-primary uk-margin" id="add_file">Upload</button>
+		</div>
+
+
+		<!-- <form class="dropzone" id="liloo">
+			<div class="fallback">
+				<input name="liloo_file_uploads" type="file" multiple />
+			</div>
+		</form>
+		<button class="uk-button uk-button-primary uk-margin send-files">Upload</button> -->
+
+
+		<div class="liloo-preview"></div>
+
+	</div>
+
+	<!-- http://localhost/busqueja/plugins/drop-zone/
+https://docs.dropzone.dev/configuration/basics/configuration-options -->
+
+
+
+
+	<script>
+		Dropzone.autoDiscover = false;
+		var myDropzone = new Dropzone("#LilooDropzone", {
+			paramName: "liloo_file_uploads",
+
+			
+			uploadMultiple: true,
+			autoProcessQueue: false,
+			parallelUploads: 10,
+			maxFiles: 5,
+			acceptedFiles: ".png, .jpeg, .jpg, .gif",
+			method: "post",
+			// maxFilesize: 10, // MB
+			// maxThumbnailFilesize: 7, // MB
+
+			/**
+			 * Botões e 
+			 */
+			addRemoveLinks: true,
+			// dictCancelUpload: "c",
+			dictRemoveFile: 'x',
+
+			/**
+			 * Tradução dos termos
+			 */
+			dictDefaultMessage: "Solte os arquivos aqui para enviar",
+			dictFallbackMessage: "Seu navegador não suporta a opção de arrastar e soltar",
+			dictFileTooBig: "O arquivo execedeu o tamanho permitido",
+			dictInvalidFileType: "Tipo de arquivo inválido",
+			dictMaxFilesExceeded: "Você não pode enviar mais arquivos",
+			dictUploadCanceled: "Upload Cancelado",
+
+
+			url: "./upload.php",
+
+			// Gera miniaturas para as imagens
+			//  createImageThumbnails: true,
+			//  thumbnailWidth: 100,
+
+			// accept: function(file, done) {
+			// 	if(file.status == "added"){
+			// 		console.log('Arquivo '+file.upload.filename+' foi adicionado com sucesso')
+			// 	}
+			// 	if(file.size <= 1e+7){
+			// 		console.log('Arquivo é menor que 10MB')
+			// 	}
+			//     console.log(file);
+			// },
+
+			//  resizeWidth: 450,
+			//  resizeHeight: 350,
+			//  resizeQuality: 1,
+			//  resizeMethod: "crop",
+			// resizeMimeType: 'image/jpeg',
+
+
+			//  previewsContainer: ".liloo-preview",
+
+
+			// Retorno vindo o arquivo upload.php
+			// success: function (file, data) {
+			// 	console.log(data)
+			// 	// let resp = JSON.parse(data)
+			// 	// if (resp.callback) {
+			// 	// 	$('.callback').html(`
+		 	// 	// 	<div class="uk-alert-${resp.callback[1]}" uk-alert>
+	    	// 	// 		<a class="uk-alert-close" uk-close></a>
+	    	// 	// 		<p>${resp.callback[0]}</p>
+			// 	// 	</div>
+		 	// 	// `)
+			// 	// }
+			// },
+			// init: function(){
+			// 	console.log(this.getQueuedFiles().length)
+			// }
+
+
+
+		});
+
+
+
+
+		myDropzone.on('maxfilesexceeded', function (file) {
+			console.log('maxfilesexceeded Está dentro')
+			console.log(file)
+		})
+
+
+		// Dispara quando o upload for completado
+		// myDropzone.on("complete", function(file) {
+		// 	$('.callback').html(`
+		// 		<div class="uk-alert-success" uk-alert>
+		// 			<a class="uk-alert-close" uk-close></a>
+		// 			<p>Arquivos enviados com sucesso!</p>
+		// 		</div>
+		// 	`)
+		// 	myDropzone.removeFile(file)
+		// })
+
+		myDropzone.on("success", function (file) {
+			console.log('Sucesso ao carregar arquivo')
+			$('.callback').html(`
+			<div class="uk-alert-success" uk-alert>
+				<a class="uk-alert-close" uk-close></a>
+				<p>Arquivos enviados com sucesso!</p>
+			</div>
+		`)
+		})
+
+
+		myDropzone.on("addedfile", function (file) {
+			// console.log(file)
+		})
+
+		// Excedeu o limite de imagens
+		myDropzone.on("maxfilesreached", function (file) {
+			console.log(file)
+			$('.callback').html(`
+			<div class="uk-alert-danger" uk-alert>
+				<a class="uk-alert-close" uk-close></a>
+				<p>Excedeu o limite de arquivos</p>
+			</div>
+		`)
+		})
+
+		// Remove quando o Upload for finalizado
+		// myDropzone.on("complete", function(file){
+		// 	myDropzone.removeFile(file)
+		// })
+
+
+		// Botão de upload, só processa a fila depois de aperter "upload"
+		$("#add_file").on("click", function () {
+			myDropzone.processQueue()
+			return false
+		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Dropzone.options.LilooDropzone = {
+ //  		paramName: "lilooUploads",
+ // 		maxFilesize: 2,
+ // 		dragend: function(){
+ // 			alert('Feito')
+ // 		},
+ //  		// accept: function(file, done) {
+ //    // 	if (file.name == "justinbieber.jpg") {
+ //    //   		done("Naha, you don't.")
+ //    // 	} else {
+ //    // 		done()
+ //    // 	}
+ //    }
+
+
+ //    Dropzone.on("complete", function(file) {
+ //  		Dropzone.removeFile(file);
+	// });
+
+
+	</script>
+
+</body>
+
+</html>

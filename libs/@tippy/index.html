@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    
+    <button 
+        data-tippy-content="Tooltip"
+        data-tippy-duration="0"
+        data-tippy-arrow="false"
+        data-tippy-delay="[0, 200]"
+    >
+    Text
+    </button>
+
+    <button 
+    data-tippy-content="Tooltip"
+    data-tippy-duration="0"
+    data-tippy-arrow="false"
+    data-tippy-delay="[0, 200]"
+>
+Text
+</button>
+
+    <a href="#" class="liloo-button">Link de teste</a>
+
+    <script type="module">
+        import './assets/popper.min.js'
+        import './assets/tippy-bundle.umd.js'
+        tippy('[data-tippy-content]')
+        tippy('.liloo-button', {
+            content: 'Show de Bola é só prestar atenção',
+            arrow: true,
+            animation: 'shift-toward',
+            theme: 'translucent',
+            trigger: 'click',
+            delay: [0,200]
+        });
+
+
+    </script>
+
+
+</body>
+</html>

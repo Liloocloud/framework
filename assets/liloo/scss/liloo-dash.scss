@@ -1,0 +1,96 @@
+@import "mixin";
+
+$dash-topbar-height: 60px;
+$dash-footer-height: 0px;
+$dash-sidebar-width: 240px;
+$dash-global-padding: 15px;
+
+[ll-dash] {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+ 
+    // Menu lateral
+    & > [sidebar] {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        bottom: #{$dash-footer-height};
+        width: calc(#{$dash-sidebar-width} - (#{$dash-global-padding}));
+        background-color: #f2f2f2;
+        & [logo]{
+            display: flex;
+            align-items: center;
+            background-color: #dedede;
+            padding: 0 #{$dash-global-padding};
+            height: #{$dash-topbar-height};
+            & h1,h2,h3,h4,h5,p{
+                font-size: 18px;
+            }
+
+        }
+        & [nav]{
+            padding: #{$dash-global-padding};
+        }
+
+    }
+
+    // Conteúdo
+    & > [main] {
+        width: calc( 100% - (#{$dash-sidebar-width} + #{$dash-global-padding}));
+        margin-left: calc(#{$dash-sidebar-width} - #{$dash-global-padding});
+        position: absolute;
+        overflow: auto;
+        top: #{$dash-topbar-height};
+        bottom: #{$dash-footer-height};
+        padding: #{$dash-global-padding};
+        background-color: #ececec;
+    }
+
+    // Menu do top
+    & [ll-topbar] {
+        width: calc( 100% - (#{$dash-sidebar-width} + #{$dash-global-padding}));
+        margin-left: calc(#{$dash-sidebar-width} - #{$dash-global-padding});
+        position: fixed;
+        z-index: 999;
+        background-color: #ffffff;
+        height: #{$dash-topbar-height};
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 #{$dash-global-padding};
+        @include boxshadow();
+        
+        & a,
+        button {
+            margin-bottom: 0px;
+        }
+        // & > [left] {
+        //     min-width: #{$dash-sidebar-width};
+        //     background-color: #fafafa;
+        //     display: flex;
+        //     justify-content: center;
+        // }
+    
+        // & > [right] {
+        //     width: calc(100% - #{$dash-sidebar-width});
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: flex-end;
+        //     padding: 0 #{$dash-global-padding};
+    
+        // }
+    }
+
+}
+
+// [footer] {
+//     height: #{$dash-footer-height};
+// }
+.ll-breadcrumb{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+

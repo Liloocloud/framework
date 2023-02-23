@@ -1,0 +1,30 @@
+/* Container */
+
+$containers: (
+    "-xsmall": (padding: $global-padding-vertical-container 25%),
+    "-small": (padding: $global-padding-vertical-container 20%),
+    "": (padding: $global-padding-vertical-container 15%),
+    "-large": (padding: $global-padding-vertical-container 10%),
+    "-xlarge": (padding: $global-padding-vertical-container 5%),
+    "-expand": (padding: $global-padding-vertical-container 0),
+);
+
+// .ll-container{
+//     // padding: 0 0;
+// }
+
+@each $key, $value in $containers { 
+    .ll-container#{$key} {
+        @each $prop, $info in $value{
+            #{$prop} : $info;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    @each $key, $value in $containers { 
+        .ll-container#{$key} {
+            padding: $global-padding-vertical-container;
+        }
+    }
+}

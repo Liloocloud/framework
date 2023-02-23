@@ -1,0 +1,23 @@
+[liloo-mode=dark] liloo-form input,
+[liloo-mode=dark] liloo-form textarea {
+  background-color: #232323 !important;
+  color: #fff !important;
+  border: 1px solid #191919 !important;
+}
+
+[liloo-mode=dark] label,
+[liloo-mode=dark] select option{
+  color: #fff !important;
+}
+
+[liloo-mode=dark] .uk-form-danger{
+  border-color: #f90606 !important;
+}
+
+.uk-form-label svg {
+  width: 65% !important;
+  margin: 0 0 3px 5px !important;
+  /* float: right !important; */
+}
+
+

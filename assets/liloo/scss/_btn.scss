@@ -1,0 +1,192 @@
+/* Button */
+
+$btn-padding: 10px 20px;
+$btn-font: 16px;
+
+// Default
+.ll-btn{
+    padding: $btn-padding;
+    font-size: $btn-font;
+    display: inline-block;
+    margin-bottom: 4px;
+    transition: 0.5s;
+    
+    @include borderRadius();
+    @include btnTransition();
+    &:hover{
+        @include btnTransition();
+        padding-right: 25px;
+    }
+    &:after{
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    & i{
+        opacity: 0.6;
+        // position: relative;
+        // top: -3px;
+        // left: 3px;
+    }
+}
+
+// Sizes
+$btnSizes: (
+    "sm": ( "padding" : 4px 9px, "font-size": 14px ),
+    "md": ( "padding" : 8px 18px, "font-size": 14px ),
+    "lg": ( "padding" : 12px 20px, "font-size": 18px ),
+    "xl": ( "padding" : 14px 28px, "font-size": 22px ),
+    "xxl": ( "padding" : 18px 30px, "font-size": 28px ),
+);
+@each $key, $value in $btnSizes { 
+    .ll-btn-#{$key} {
+        @each $prop, $info in $value{
+            #{$prop} : $info;
+        }
+    }
+}
+
+// Colors
+$btnColors: (
+    "-blue": (
+        "-100": #1974DB,
+        "-200": #1566C2,
+        "-300": #11529C,
+        "-400": #0F4787,
+        "-500": #0D3C73,
+    ),
+    "-red": (  
+        "-100": #E30000,
+        "-200": #C90000,
+        "-300": #A30000,
+        "-400": #8F0000,
+        "-500": #780000,
+    ),
+    "-purple": (
+        "-100": #7F00DB,
+        "-200": #7100C2,
+        "-300": #5B009C,
+        "-400": #4F0087,
+        "-500": #430073,
+    ),
+    "-green": (
+        "-100": #30AF12,
+        "-200": #28960F,
+        "-300": #1E700B,
+        "-400": #185C09,
+        "-500": #134707,
+    ),
+    "-orange": (
+        "-100": #FA6000,
+        "-200": #E05600,
+        "-300": #CC4E00,
+        "-400": #AB4100,
+        "-500": #9E3C00,
+    )
+    // "green": ()
+    // "grey": (),
+    // "pink": (),
+);
+$optColors: (
+    "-blue": (
+        'color': #f7f7f7,
+        'hover': #0a305c,
+    ),
+    "-red": (
+        'color': #f7f7f7,
+        'hover': #610101,
+    ),
+    "-purple": (
+        'color': #f7f7f7,
+        'hover': #36005c,
+    ),
+    "-green": (
+        'color': #f7f7f7,
+        'hover': #0f3a06,
+    ),
+    "-orange": (
+        'color': #f7f7f7,
+        'hover': #a54102,
+    )
+);
+
+@each $key, $value in $btnColors { 
+    @each $prop, $color in $value{  
+        // Button Shape
+        .ll-btn#{$key}#{$prop} {
+            background-color: #{$color};
+            border: 2px solid #{$color};
+            @each $opt, $item in $optColors{
+                @if $key == $opt{
+                    @each $it, $co in $item{
+                        @if $it == "color" {
+                            color: #{$co};
+                        }
+                        @if $it == "hover"{
+                            &:hover{
+                                background-color: #{$co};
+                                border: 2px solid #{$co};
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Button Out
+        .ll-btn#{$key}-out#{$prop} {
+            border: 2px solid #{$color};
+            color: #{$color};
+            @each $opt, $item in $optColors{
+                @if $key == $opt{
+                    &:hover{
+                        @each $it, $co in $item{
+                            @if $it == "color" {
+                                color: #{$co};
+                            }
+                            @if $it == "hover"{
+                                background-color: #{$co};
+                                border: 2px solid #{$co};
+                            }
+                        }
+                    }
+                }
+            }
+        }      
+    }
+}
+
+
+
+// Blue
+// $blueLink: #f7f7f7;
+// $blueHover: #0A376B;
+// $blueColors: (
+//     100: #1974db,
+//     200: #145bad, 
+//     300: #154780
+// );
+
+// @each $key, $value in $blueColors {
+//     .ll-btn-blue-#{$key} {
+//         background-color: #{$value};
+//         border: 2px solid #{$value};
+//         color: $blueLink;
+//         &:hover{
+//             background-color: $blueHover;
+//             border: 2px solid $blueHover;
+//         }
+//     }
+//     .ll-btn-blue-out-#{$key} {
+//         border: 2px solid #{$value};
+//         color: #{$value};
+//         &:hover{
+//             background-color: $blueHover;
+//             border: 2px solid $blueHover;
+//             color: $blueLink;
+//         }
+//     }
+// }

@@ -1,0 +1,60 @@
+
+
+
+[ll-dash] > [sidebar] {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0px;
+  width: calc(240px - (15px));
+  background-color: #f2f2f2;
+}
+[ll-dash] > [sidebar] [logo] {
+  display: flex;
+  align-items: center;
+  background-color: #dedede;
+  padding: 0 15px;
+  height: 60px;
+}
+[ll-dash] > [sidebar] [logo] h1, [ll-dash] > [sidebar] [logo] h2, [ll-dash] > [sidebar] [logo] h3, [ll-dash] > [sidebar] [logo] h4, [ll-dash] > [sidebar] [logo] h5, [ll-dash] > [sidebar] [logo] p {
+  font-size: 18px;
+}
+[ll-dash] > [sidebar] [nav] {
+  padding: 15px;
+}
+[ll-dash] > [main] {
+  width: calc( 100% - (240px + 15px));
+  margin-left: calc(240px - 15px);
+  position: absolute;
+  overflow: auto;
+  top: 60px;
+  bottom: 0px;
+  padding: 15px;
+  background-color: #ececec;
+}
+[ll-dash] [ll-topbar] {
+  width: calc( 100% - (240px + 15px));
+  margin-left: calc(240px - 15px);
+  position: fixed;
+  z-index: 999;
+  background-color: #ffffff;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-shadow: -1px 4px 8px -3px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: -1px 4px 8px -3px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: -1px 4px 8px -3px rgba(0, 0, 0, 0.11);
+}
+[ll-dash] [ll-topbar] a,
+[ll-dash] [ll-topbar] button {
+  margin-bottom: 0px;
+}
+
+.ll-breadcrumb {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}

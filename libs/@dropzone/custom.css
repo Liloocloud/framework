@@ -1,0 +1,81 @@
+﻿.dropzone .dz-preview .dz-image {
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+}
+
+.dropzone .dz-preview .dz-details .dz-size {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.dropzone .dz-preview .dz-progress {
+    height: 12px;
+    left: 50px;
+    top: 107px;
+    margin-top: -8px;
+    width: 100px;
+    margin-left: -40px;
+    border-radius: 3px;
+}
+
+.dropzone .dz-preview .dz-remove {
+    background: #d10c0c;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    text-decoration: none !important;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 680px) {
+    .dropzone .dz-preview .dz-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .dropzone .dz-preview .dz-details {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 10px 10px;
+    }
+
+    .dropzone .dz-preview .dz-details .dz-size {
+        font-size: 10px;
+        margin: 3px;
+    }
+
+    .dropzone .dz-preview .dz-progress {
+        top: 68px;
+        width: 60px;
+    }
+
+    .dropzone .dz-preview .dz-success-mark svg,
+    .dropzone .dz-preview .dz-error-mark svg {
+        padding: 10px;
+        margin-top: -9px;
+    }
+
+    .dropzone .dz-preview .dz-error-message {
+        font-size: 11px;
+        top: 70px;
+        left: -29px;
+    }
+
+    .dropzone .dz-preview {
+        margin: 12px !important;
+        margin-bottom: -5px !important;
+    }
+}
+
+[liloo-mode="dark"] .dropzone {
+    border: 3px dashed #7a7a7a !important;
+    background: #ffffff00 !important;
+    color: #d0d0d0 !important;
+}

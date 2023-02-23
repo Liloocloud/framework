@@ -1,0 +1,62 @@
+/* Reset */
+body {
+    // background: $color-body;
+    // @include transition();
+}
+* {
+    margin: 0;
+    padding: 0;
+    // font-family: $font-family;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-heading;
+}
+a {
+    text-decoration: none;
+}
+button {
+    background-color: transparent;
+}
+
+table tr:hover{
+    cursor: pointer;
+    background-color: #ebebeb !important;
+}
+
+[liloo-loader] {
+    display: none;
+}
+[liloo-loader] .liloo-loader-spinner {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0%, 0%, 0%, 0.08);
+    position: fixed;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Custom Scrool Bar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #{$color-goblal} #{$color-bg-scroolbar};
+}
+*::-webkit-scrollbar {
+    width: #{$width-scroolbar};
+}
+
+*::-webkit-scrollbar-track {
+    background: #{$color-bg-scroolbar};
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #{$color-goblal};
+    border-radius: 20px;
+    border: 3px solid #{$color-bg-scroolbar};
+}

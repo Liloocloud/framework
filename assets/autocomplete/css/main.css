@@ -1,0 +1,6 @@
+.results_list p{
+  text-align: center !important;
+}
+li mark{
+  color: #ff8325 !important;
+}

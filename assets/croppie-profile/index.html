@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="./css/croppie.css" />
+<div class="demo"></div>
+
+<script src="./js/croppie.js"></script>
+<script>
+// var el = document.querySelector('.demo');
+// var resize = new Croppie(el, {
+//     viewport: { width: 100, height: 100 },
+//     boundary: { width: 300, height: 300 },
+//     showZoomer: false,
+//     enableResize: true,
+//     enableOrientation: true,
+//     mouseWheelZoom: 'ctrl'
+// });
+// resize.bind({
+//     url: 'demo/demo-2.jpg',
+// });
+// //on button click
+// resize.result('blob').then(function(blob) {
+//     // do something with cropped blob
+// });
+
+var lilooCroppie = new Croppie(document.querySelector('.demo'), {
+    enableExif: true,
+    viewport: {
+        width: 200,
+        height: 200,
+        type: 'circle'
+    },
+    boundary: {
+        width: 300,
+        height: 300
+    }
+})
+lilooCroppie.method(args)
+
+
+// $('.demo').croppie({
+//     url: 'demo/demo-1.jpg',
+// });
+</script>
+<!-- or even simpler -->
+<!-- <img class="my-image" src="demo/demo-1.jpg" /> -->
+<script>
+// $('.my-image').croppie();
+</script>

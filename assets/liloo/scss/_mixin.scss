@@ -1,0 +1,54 @@
+@mixin transition() {
+    -webkit-transition: all 6.2s 0s linear, all 0.5s 0s ease;
+    -moz-transition: all 6.2s 0s linear, all 0.5s 0s ease;
+    -o-transition: all 6.2s 0s linear, all 0.5s 0s ease;
+    transition: all 6.2s 0s linear, all 0.5s 0s ease;
+}
+
+@mixin btnTransition() {
+    // -webkit-transition: .1s ease-in-out;
+    // -moz-transition: .1s ease-in-out;
+    // -o-transition: .1s ease-in-out;
+    // transition: .1s ease-in-out;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+@mixin borderRadius() {
+    -webkit-border-radius: $global-border-radius;
+    -moz-border-radius: $global-border-radius;
+    border-radius: $global-border-radius;
+}
+
+@mixin boxshadow {
+    // box-shadow: -1px -1px 12px 4px rgba(0, 0, 0, 0.11);
+    // -webkit-box-shadow: -1px -1px 12px 4px rgba(0, 0, 0, 0.11);
+    // -moz-box-shadow: -1px -1px 12px 4px rgba(0, 0, 0, 0.11);
+
+    box-shadow: -1px 4px 8px -3px rgba(0,0,0,0.11);
+    -webkit-box-shadow: -1px 4px 8px -3px rgba(0,0,0,0.11);
+    -moz-box-shadow: -1px 4px 8px -3px rgba(0,0,0,0.11);
+}
+
+
+// .floating-input:focus ~ .highlight , .floating-select:focus ~ .highlight {
+//   -webkit-animation:inputHighlighter 0.3s ease;
+//   -moz-animation:inputHighlighter 0.3s ease;
+//   animation:inputHighlighter 0.3s ease;
+// }
+
+// @-webkit-keyframes inputHighlighter {
+// 	from { background:#5264AE; }
+//   to 	{ width:0; background:transparent; }
+// }
+// @-moz-keyframes inputHighlighter {
+// 	from { background:#5264AE; }
+//   to 	{ width:0; background:transparent; }
+// }
+// @keyframes inputHighlighter {
+// 	from { background:#5264AE; }
+//   to 	{ width:0; background:transparent; }
+// }

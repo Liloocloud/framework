@@ -1,0 +1,210 @@
+/* Form */
+
+$ligth-padding: 15px;
+$light-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$heigth-textarea: 70px;
+
+[liloo-form-light]{
+
+    & div{
+        width: 100%;
+    }
+
+    &
+    [text] > input,
+    [password] > input, 
+    [select] > select, 
+    [textarea] > textarea
+    {
+        font-family: #{$light-font-family};
+        outline: none;
+        padding: 15px #{$ligth-padding};
+        font-size: 16px;
+        margin-bottom: 16px;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        color: #797979;
+        // outline-color: red;
+        // width: calc( 100% - (2 * #{$ligth-padding}));
+    }
+
+    & 
+    [text] > label,
+    [password] > label, 
+    [select] > label, 
+    [checkbox] > label, 
+    [radio] > label, 
+    [textarea] > label
+    {
+        display: block;
+        position: absolute;
+        margin-top: -80px;
+        margin-left: 10px;
+        background: #f1f1f1;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #929292;
+        box-shadow: 1px 2px 3px #dedede;
+        @include transition();
+    }
+
+    & 
+    [text] input:focus~label, [text] input:hover~label,
+    [password] input:focus~label, [password] input:hover~label,
+    [select] select:focus~label, [select] select:hover~label,
+    [textarea] textarea:focus~label, [textarea] textarea:hover~label    
+    {
+        background: #{$color-goblal};
+        color: #f1f1f1;
+    }
+
+    &
+    [text] > input,
+    [password] > input,
+    [textarea] > textarea
+    {
+        width: calc( 100% - (2 * #{$ligth-padding}));
+    }
+
+    // Textarea
+    & [textarea]
+    {
+        & textarea{
+            resize: none;
+            height: #{$heigth-textarea};
+        }
+        & textarea + label {
+            margin-top: calc((-#{$heigth-textarea}) + (-65px));
+        }
+    }
+
+    // Select
+    & [select] > select{
+        width: 100.5% !important;
+    }
+
+    // checkbox
+    &
+    [checkbox],
+    [radio]{
+        margin-top: -5px;
+        margin-bottom: 21px;
+        font-family: #{$light-font-family};
+        border: 1px solid #dedede;
+        padding: 15px #{$ligth-padding};
+        border-radius: 4px;
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        width: calc( 100% - (2 * #{$ligth-padding}));
+
+        & span{
+            width: 100%;
+
+            & input{
+                height: 18px;
+                width: 18px;
+                margin-top: 10px;    
+            }
+        }
+
+        & label {
+            // margin-top: calc((-#{$heigth-textarea}) + (-65px));
+            margin-top: -27px;
+            margin-left: -5px;
+        }
+
+        & :hover~label{
+            background: #{$color-goblal} !important;
+            color: #f1f1f1 !important;
+        }
+
+    }
+    
+    [checkbox='col-2'] > span,
+    [radio='col-2'] > span
+    {
+        width: 50%; 
+    }
+    [checkbox='col-3'] > span,
+    [radio='col-3'] > span
+    {
+        width: 33.3%; 
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+[liloo-form-floating]{
+
+    & div{
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    & input, select, textarea{
+        font-size: 16px;
+        // padding: 4px 4px;
+        padding: 4px 0;
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #999999;
+        margin: 25px 0;
+        
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid #{$color-goblal};
+            // -webkit-animation: scale-up-hor-left 0.1s ease-in-out both;
+            //         animation: scale-up-hor-left 0.1s ease-in-out both;
+        }      
+        
+    }
+
+    & textarea {
+        overflow: hidden;
+        overflow-x: hidden;
+        resize: vertical;
+    }
+
+    & label {
+        color: #999;
+        font-size: 16px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 0px;
+        top: 5px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    & input:focus~label,
+    input:not(:placeholder-shown)~label,
+    textarea:focus~label,
+    textarea:not(:placeholder-shown)~label {
+        top: -18px;
+        font-size: 12px;
+        color: #{$color-goblal} !important;
+    }
+
+    & select:focus~label,
+    select:not([value=""]):valid~label {
+        top: -18px;
+        font-size: 12px;
+        color: #{$color-goblal} !important;
+    }
+}

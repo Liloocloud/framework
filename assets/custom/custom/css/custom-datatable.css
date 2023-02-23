@@ -1,0 +1,41 @@
+/*
+Arquivo de costumização da tabela dinamica
+@copy Felipe Oliveira Lourenço - 03/10/2019
+ */	
+
+:root{
+	--table-btn-color: #1e87f0;
+	--table-btn-color-hover: #0c6dce;
+}
+
+/* Esconder cabeçalho */
+.dataTables_wrapper thead{ display: none; }
+
+/* Números de resultado - TOP */
+.dataTables_wrapper .dataTables_length label{ width: 30% !important; float: left; display: none; }
+.dataTables_wrapper .dataTables_length label select{ padding: 5px 15px; }
+
+/* Busca - TOP */
+.dataTables_wrapper .dataTables_filter label{ width: 100% !important; }
+.dataTables_wrapper .dataTables_filter label input{ padding: 5px 15px; border: 1px solid #898989; width: 100%}
+
+/* Status - FOOTER */
+.dataTables_wrapper .dataTables_info{ width: 50%; float: left; }
+
+/* Paginação  - FOOTER */
+.dataTables_wrapper .dataTables_paginate .previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_paginate .next{
+	padding: 4px 6px;
+	color: #fff;
+	background: var(--table-btn-color);
+	margin-left: 5px;
+}
+.dataTables_wrapper .dataTables_paginate .previous:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .next:hover{
+	text-decoration: none;
+	background: var(--table-btn-color-hover);
+}
+.dataTables_wrapper .dataTables_paginate{ width: 50%; float: left; text-align: right; }
+.dataTables_wrapper .dataTables_paginate .current{ background: #dedede; color: #666; }
