@@ -1,0 +1,5 @@
+# Framework Liloo
+_kernel/libs/*
+# !_kernel/__Kernel.php
+
+composer.lock

@@ -1,0 +1,12 @@
+{
+    "require": {
+        "monolog/monolog": "^2.9",
+        "phpmailer/phpmailer": "^6.7"
+    },
+    "config": {
+        "vendor-dir": "_kernel/libs/"
+    },
+    "autoload": {
+        "psr-4": {"Modules\\": "Modules/"}
+    }
+}
