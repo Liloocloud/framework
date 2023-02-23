@@ -1,0 +1,70 @@
+
+#ads-banner{
+    & img{
+        @include border();
+    }    
+}
+
+
+#ads-cards{
+    & img{
+        @include border-top();
+    }
+
+    // Card
+    & ul li .uk-card {
+        & h3{
+            margin: 2px 0;
+            font-size: 16px;
+        }
+        & .aval{
+            display: block;
+            margin-bottom: 10px;
+        }
+        & .categ{
+            background-color: #f1f1f1 !important;
+            padding: 5px;
+            font-size: 12px !important;
+            color: #535353;
+            display: inline-block;
+            @include border();
+        }
+        & .phone, address{
+            margin: 0;
+        }
+        & .see{
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        & button{
+            font-weight: 800;
+            line-height: 0;
+            padding: 0;
+            font-size: 14px !important;
+            color: $color-secondary !important;
+        }
+        & .controls{
+            & a {
+                color: $color-secondary;
+                background-color: #f1f1f1;
+                padding: 0 5px;
+                line-height: 30px;
+                margin-right: 3px;
+                margin-bottom: 5px;
+                & i{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 960px) {
+    #ads-banner {
+        & .uk-slideshow-items {
+            min-height: 450px !important;
+        }
+
+    }
+}

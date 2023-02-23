@@ -1,0 +1,26 @@
+#home-categories{
+    & div{
+        z-index: 0 !important;
+    }
+    & .uk-card {
+        @include border();
+        & h2{
+            font-size: 16px !important;
+        }
+    }
+
+    & a:hover{
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #home-categories{
+        & .uk-card {
+            & h2{
+                font-size: 14px !important;
+            }
+        } 
+    } 
+
+}

@@ -1,0 +1,49 @@
+.uk-button-primary {
+  background: $color-primary !important;
+  color: $color-light !important;
+  &:hover {
+    background: $color-secondary !important;
+  }
+}
+
+.uk-button-secondary {
+  background: $color-secondary !important;
+  color: $color-light !important;
+  &:hover {
+    background: $color-primary !important;
+    color: $color-secondary !important;
+  }
+}
+
+.uk-button-whatsapp {
+  background: #0d9b0f;
+  color: #fff;
+}
+.uk-button-whatsapp:hover {
+  background: #0a6e0c;
+  color: #fff;
+}
+
+.uk-button-text {
+  text-transform: none;
+}
+
+.uk-button,
+.flex-status {
+  @include border();
+  text-transform: none;
+}
+
+.uk-icon-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 500px;
+  background: #efefef;
+  color: $color-secondary;
+}
+
+/* Tamanhos dos botões */
+.uk-button-xlarge {
+  font-size: 22px;
+  padding: 15px 40px;
+}

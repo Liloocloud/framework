@@ -1,0 +1,312 @@
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.8px;
+}
+
+.liloo-login-sideone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #03475A;
+  flex-direction: column;
+}
+.liloo-login-sideone h3,
+.liloo-login-sideone p{
+  color: #efefef;
+}
+
+
+.degrade {
+  background: #033e4e;
+  background: linear-gradient(149deg, #034051 32%, #035369 100%);
+}
+
+.uk-card {
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+
+/* LOADER */
+[flex-loader] {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  padding: 30% 0;
+  background: #c7c7c7;
+  opacity: 0.5;
+  height: 100%;
+  z-index: 99999999999;
+  display: none;
+}
+
+/* Buttom */
+.uk-button {
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+
+.uk-button-primary {
+  background-color: #03475A !important;
+}
+.uk-button-primary:hover {
+  background-color: #FFC10D !important;
+}
+.uk-button-primary:visited {
+  background-color: #03475A !important;
+}
+
+.uk-icon-button:hover {
+  text-decoration: none;
+}
+
+.uk-light .uk-button-custom {
+  background-color: #FFC10D !important;
+  color: #03475A;
+}
+
+.uk-light .uk-button-custom:hover {
+  background-color: #03475A !important;
+  color: #FFC10D;
+}
+
+/* Navbar TOP */
+#topbar nav {
+  background-color: #f8f8f8;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 3px 9px #0000002e;
+  z-index: 999;
+}
+#topbar #topbar > div {
+  height: 80px;
+}
+
+/* LISTAGEM DOS IMÓVEIS - VERTICALMENTE */
+.busqueja-list {
+  margin-bottom: 5% !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+.busqueja-list .cover {
+  -webkit-border-top-left-radius: 10px !important;
+  -webkit-border-bottom-left-radius: 10px !important;
+  -moz-border-radius-topleft: 10px !important;
+  -moz-border-radius-bottomleft: 10px !important;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+.busqueja-list .badge {
+  background-color: #ebebeb;
+  font-size: 14px;
+  padding: 0 5px;
+  letter-spacing: 0;
+  margin-right: 10px;
+  color: #03475A;
+  font-weight: 600;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.busqueja-list h2 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.busqueja-list h3 {
+  margin-top: -20px !important;
+  margin-bottom: -5px !important;
+  font-size: 24px;
+  color: #03475A !important;
+  font-weight: 400;
+  white-space: nowrap;
+  max-width: 90ch;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.busqueja-list .description {
+  white-space: nowrap;
+  max-width: 100ch;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.busqueja-list .hours {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+.busqueja-list .uk-icon-button {
+  background-color: #FFC10D;
+}
+.busqueja-list .uk-icon-button span {
+  color: #03475A;
+}
+.busqueja-list .uk-icon-button:hover {
+  background-color: #03475A;
+}
+.busqueja-list .uk-icon-button:hover span {
+  color: #FFC10D;
+}
+.busqueja-list .situation {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-transform: none;
+  top: 15px;
+  right: 15px;
+  padding: 4px 10px 0 10px;
+  background-color: #03475A;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.busqueja-list .grade .uk-card {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #f9f9f9;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.busqueja-list .grade .uk-card span {
+  width: 100%;
+  display: block;
+  font-size: 14px;
+}
+.busqueja-list .grade .uk-card i {
+  font-size: 13px;
+  margin-right: 10px;
+  color: #a1a1a1;
+}
+.busqueja-list .grade .uk-card .prop {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+.busqueja-list .tags {
+  margin: 15px 0;
+}
+.busqueja-list .tags p {
+  display: inline-block;
+  background: #e8e8e8;
+  padding: 0px 6px 1px 6px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #838383;
+  margin: 3px 6px 3px 0;
+}
+.busqueja-list .price {
+  font-weight: 600;
+  font-size: 25px;
+  color: #666;
+}
+.busqueja-list .btns a {
+  display: inline-block;
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (max-width: 640px) {
+  .busqueja-list .grade .uk-card i {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+/* FORM */
+select {
+  cursor: pointer;
+}
+form .uk-input,
+form .uk-select {
+  padding: 0px 20px !important;
+  height: 60px !important;
+  border-radius: 5px;
+  font-size: 16px;
+}
+form .uk-form-icon {
+  padding-left: 10px !important;
+}
+form .uk-form-label {
+  color: #727272 !important;
+  font-size: 16px;
+}
+form svg {
+  color: #03475A;
+  width: 15px;
+  margin: 0 5px 3px 3px;
+}
+form .liloo-count-input .counters {
+  padding: 0px 10px;
+  background-color: #f2f2f2;
+  margin-bottom: 8px;
+  font-size: 12px;
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  border-radius: 2px !important;
+}
+form .liloo-count-input progress {
+  margin-top: 0px;
+  height: 5px;
+}
+
+/* Barra de Progress  */
+/*
+ progress[value]::-webkit-progress-bar {
+    background: #ec9819 !important;
+    border-radius: 2px;
+} 
+*/
+.little::-webkit-progress-value {
+  background: #ec9819;
+}
+
+.strong::-webkit-progress-value {
+  background-color: #32b611;
+}
+
+.wrong::-webkit-progress-value {
+  background-color: #ce1313;
+}
+
+/* Alert uikit */
+[uk-alert], .uk-alert,
+.steps button {
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+[uk-alert] p, .uk-alert p {
+  font-size: 16px;
+}
+
+/* Custom */
+/* Steps do cadastro de usuário */
+.steps button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  display: none;
+}
+
+.steps-mobile button {
+  width: 55px !important;
+  height: 45px !important;
+  font-size: 13px;
+}
+
+.steps .check {
+  background: #033f4f;
+  color: #fff;
+}
+
+.buttoms-block > * {
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+

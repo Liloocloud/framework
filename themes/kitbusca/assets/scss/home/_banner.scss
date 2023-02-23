@@ -1,0 +1,65 @@
+#home-banner-slide{ 
+    // margin-top: 80px;
+    
+    // Navegação
+    & .uk-slidenav-container a {
+        color: #000 !important;
+        height: 50px;
+        width: 50px;
+        background: #f6f6f6;
+        margin: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include border();
+    }
+}
+
+// Sobre o Banner H1 + p + Form
+#home-banner {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 250px !important;
+    text-align: center;
+
+    & h1 {
+        font-size: 40px !important;
+        color: $color-light !important;
+        font-weight: 700;
+    }
+
+    & p {
+        font-size: 16px !important;
+        color: $color-light;
+    }
+}
+
+// Media depois de 640px
+@media only screen and (max-width: 640px) {
+    #home-banner {
+        top: 200px !important;
+        & h1 {
+            padding: 0 40px !important;
+            font-size: 25px !important;
+        }
+        & p {
+            padding: 0 40px !important;
+            font-size: 14px !important;
+        }
+    }
+    #home-banner-slide,
+    #home-banner-slide .uk-slideshow-items{
+        height: 620px !important;
+    }
+}
+
+// Media depois de 980px
+@media only screen and (max-width: 980px) {
+    #home-banner {
+        top: 290px !important;
+        & h1 {
+            font-size: 30px !important;
+        }
+    }
+}

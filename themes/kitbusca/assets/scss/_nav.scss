@@ -1,0 +1,201 @@
+$width-offcanva-max: 350px;
+$width-offcanva-min: 250px;
+
+// Desktop
+#liloo-menu-top-desktop {
+    position: fixed;
+    top: 0;
+    z-index:999;
+    width: 100%;
+    padding: 0 30px;
+    background-color: #f8f8f8;
+
+    & .logo {
+        width: 100px;
+        margin-right: 20px;
+    }
+
+    & .uk-navbar-nav {
+        // Link do Menu
+        & li a {
+            font-size: 16px !important;
+            font-weight: 600;
+            text-transform: inherit !important;
+            color: $color-secondary !important;
+
+            &:hover {
+                background: #dedede !important;
+            }
+        }
+
+        // Botão do Menu
+        & .uk-navbar-item {
+            & a {
+                font-size: 16px !important;
+                margin: 0 3px;
+            }
+
+            & .uk-button-link {
+                color: $color-secondary !important;
+                font-weight: 600;
+                padding: 8px 10px;
+                &:hover {
+                    background-color: #dedede;
+                }
+            }
+
+            & .uk-button-default {
+                border: 2px solid $color-secondary !important;
+                color: $color-secondary !important;
+                font-weight: 600;
+                &:hover {
+                    background-color: #dedede;
+                }
+            }
+        }
+
+        // Dropdown
+        & [uk-dropdown] {
+            top: 80px !important;
+            padding: 15px;
+            border-top: 3px solid $color-primary;
+            @include border-bottom();
+            & a {
+                padding: 8px 10px;
+                &:hover {
+                    background-color: #dedede;
+                    @include border();
+                }
+                & i {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+#liloo-menu-top-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 0 30px;
+    background-color: #f8f8f8;
+
+    & [uk-nav] {
+         z-index:999;
+    }
+
+    & .logo {
+        width: 120px;
+    }
+}
+
+// Off Canvas
+#liloo-menu-top-offcanvas {
+    z-index: 1000000 !important;
+
+    // Logotipo
+    & .logo {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+    // Fechar
+    & .uk-offcanvas-close {
+        background: $color-primary;
+        color: $color-secondary;
+        padding: 8px;
+        @include border();
+    }
+    // Box content
+    & .uk-offcanvas-bar {
+        background-color: $color-light !important;
+        -webkit-box-shadow: 0px 0px 21px -1px rgba(0, 0, 0, 0.34) !important;
+        box-shadow: 0px 0px 21px -1px rgba(0, 0, 0, 0.34) !important;
+        width: $width-offcanva-max;
+    }
+    // Menu
+    & .uk-nav-default {        
+        & li a {
+            font-size: 16px !important;
+            font-weight: 600;
+            text-transform: inherit !important;
+            color: $color-secondary !important;
+            padding: 8px 10px;
+            @include border();
+
+            &:hover {
+                background: #dedede !important;
+            }
+
+            & ::before{
+                margin-right: 5px;
+            }
+        }
+        & .uk-navbar-item {
+            display: block;
+            & a {
+                font-size: 16px !important;
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            & .uk-button-link {
+                color: $color-secondary !important;
+                font-weight: 600;
+                padding: 8px 10px;
+                &:hover {
+                    background-color: #dedede;
+                }
+            }
+
+            & .uk-button-default {
+                border: 2px solid $color-secondary;
+                color: $color-secondary;
+                font-weight: 600;
+                &:hover {
+                    background-color: #dedede;
+                }
+            }
+        }
+        & .liloo-fix{
+            // position: absolute;
+            // bottom: 20px;
+            margin-top: 20px;
+            width: $width-offcanva-max - 40px;
+        }
+
+    }
+}
+
+// Media depois de 460px
+@media screen and (max-width: 460px) {
+    #liloo-menu-top-offcanvas {
+        & .uk-offcanvas-bar {
+            width: $width-offcanva-min;
+        }
+        & .liloo-fix{
+            width: $width-offcanva-min - 40px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    #liloo-menu-top-offcanvas {
+        & .liloo-fix{
+            width: $width-offcanva-max - 60px !important;
+        }
+    }
+}
+
+// Media depois de 980px
+@media screen and (max-width: 980px) {
+    #liloo-menu-top-desktop {
+        display: none;
+    }
+    #liloo-menu-top-mobile {
+        display: block;
+    }
+}

@@ -1,0 +1,56 @@
+/* Card */
+
+%heading{
+    padding: $global-padding;
+    h1{ font-size: $global-h1; }
+    h2{ font-size: $global-h2; }
+    h3{ font-size: $global-h3; }
+    h4{ font-size: $global-h4; }
+    h5{ font-size: $global-h5; }
+    h5{ font-size: $global-h6; }
+}
+
+
+.ll-card{
+    width: auto;
+    background-color: $color-card;
+    @include borderRadius();
+    
+    & > .ll-card-header{   
+        border-bottom: 1px solid #dedede;
+        @extend %heading;
+    }
+    
+    & > .ll-card-body{
+        @extend %heading;
+    }
+    
+    & > .ll-card-footer{
+        border-top: 1px solid #dedede;
+        @extend %heading;
+    }
+
+}
+
+[ll-card]{
+    width: auto;
+    background-color: $color-card;
+    @include borderRadius();
+    
+    & > [header]{   
+        border-bottom: 1px solid #dedede;
+        display: flex;
+        justify-content: space-between;
+        @extend %heading;
+    }
+    
+    & > [body]{
+        @extend %heading;
+    }
+    
+    & > [footer]{
+        border-top: 1px solid #dedede;
+        @extend %heading;
+    }
+
+}

@@ -1,0 +1,50 @@
+/* Grid */
+
+.ll-header {
+    grid-area: header;
+    background-color: rgb(219, 219, 219);
+    position: fixed;
+    height: 60px;
+    top: 0;
+    width: 100%;
+}
+
+.ll-sidebar {
+    grid-area: menu;
+    position: fixed;
+    overflow: auto;
+    top: 70px;
+    bottom: 10px;
+    width: $side-bar;
+    @include transition();
+    
+}
+
+.ll-sidebar-small{
+    width: $side-bar-small;
+    @include transition();
+}
+
+.ll-main {
+    grid-area: main;
+    overflow: auto;
+    margin-top: 60px;
+    padding: $global-padding;
+}
+
+.ll-grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'menu main';
+    grid-template-columns: $side-bar auto;
+    grid-gap: 10px;
+    /* background-color: #2196F3; */
+    /* padding: 10px; */
+}
+
+.ll-grid-container>div {
+    background-color: rgb(255, 255, 255);
+    /* padding: 20px 0; */
+    /* font-size: 30px; */
+}

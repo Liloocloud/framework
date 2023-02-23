@@ -1,0 +1,23 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+button{
+    background-color: transparent;
+}
+
+// [liloo-loader]{display: none;}
+[liloo-loader] .liloo-loader-spinner{ 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0%,0%,0%,0.08);
+  position: fixed;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

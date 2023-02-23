@@ -1,0 +1,75 @@
+.item-listview {
+    @include border();
+    & .title {
+        font-size: 25px !important;
+        margin: 0 !important;
+    }
+
+    & .categ {
+        font-size: 16px !important;
+        margin-top: 10px !important;
+        margin-bottom: 5px !important;
+        background-color: #f0f0f0;
+        display: inline-block !important;
+        padding: 2px 5px;
+        @include borderRadius();
+    }
+
+    & .description {
+        margin: 0 !important;
+    }
+
+    & .opening {
+        padding: 20px 0;
+        margin-bottom: -25px !important;
+        & .uk-accordion-title {
+            font-size: 16px !important;
+            &::before {
+                margin-right: 10px;
+                margin-left: 0;
+                float: left;
+            }
+        }
+
+        & .uk-accordion-content {
+            & p {
+                margin: 0 !important;
+            }
+            & .item {
+                width: 80px !important;
+                display: inline-block;
+            }
+            & .info {
+                font-weight: 500;
+            }
+        }
+        & .open {
+            color: #04a139;
+        }
+        & .closed {
+            color: #e03939;
+        }
+    }
+
+    & .buttons {
+        & button {
+            padding: 15px;
+            border: none;
+            font-size: 15px;
+            @include borderRadius();
+        }
+
+        & button:hover {
+            background-color: $color-primary;
+        }
+        & .whatsapp:hover {
+            color: #fff;
+            background-color: #04a139 !important;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        // background-color: #f9f9f9;
+    }
+}

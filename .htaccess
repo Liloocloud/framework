@@ -1,0 +1,84 @@
+RewriteEngine On
+#Options All -Indexes
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1
+
+# - REDIRECIONAMENTO HTTPS - #
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=302]
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^ https://%1%{REQUEST_URI} [R=302,L]
+
+# Forçar barra no final da URL
+# RewriteCond %{REQUEST_URI} /+[^\.]+$
+# RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+
+# Extra Security Headers
+<IfModule mod_headers.c>
+        # Header edit Set-Cookie ^(.*)$ $1;SameSite=None;Secure
+        # Header set Set-Cookie: "ACookieAvailableCrossSite; SameSite=None; Secure"
+	Header set X-XSS-Protection "1; mode=block"
+	Header always append X-Frame-Options SAMEORIGIN
+	Header set X-Content-Type-Options nosniff
+</IfModule>
+
+<IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType image/jpg "access 1 year"
+        ExpiresByType image/jpeg "access 1 year"
+        ExpiresByType image/gif "access 1 year"
+        ExpiresByType image/png "access 1 year"
+        ExpiresByType text/css "access 1 month"
+        ExpiresByType application/pdf "access 1 month"
+        ExpiresByType text/x-javascript "access 1 month"
+        ExpiresByType application/x-shockwave-flash "access 1 month"
+        ExpiresByType image/x-icon "access 1 year"
+        ExpiresDefault "access 2 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+   Header unset ETag
+    <FilesMatch "\.(ico|gif|jpg|jpeg|png)$">
+          Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+          Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
+<ifmodule mod_deflate.c>
+        AddOutputFilterByType DEFLATE application/javascript
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+        AddOutputFilterByType DEFLATE application/x-font
+        AddOutputFilterByType DEFLATE application/x-font-opentype
+        AddOutputFilterByType DEFLATE application/x-font-otf
+        AddOutputFilterByType DEFLATE application/x-font-truetype
+        AddOutputFilterByType DEFLATE application/x-font-ttf
+        AddOutputFilterByType DEFLATE application/x-javascript
+        AddOutputFilterByType DEFLATE application/xhtml+xml
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE font/opentype
+        AddOutputFilterByType DEFLATE font/otf
+        AddOutputFilterByType DEFLATE font/ttf
+        AddOutputFilterByType DEFLATE image/svg+xml
+        AddOutputFilterByType DEFLATE image/x-icon
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE text/html
+        AddOutputFilterByType DEFLATE text/javascript
+        AddOutputFilterByType DEFLATE text/plain
+        AddOutputFilterByType DEFLATE text/xml
+        AddOutputFilterByType DEFLATE text/text
+</ifmodule>
+
+<ifModule mod_gzip.c>
+        mod_gzip_on Yes
+        mod_gzip_dechunk Yes
+        mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+        mod_gzip_item_include mime ^application/x-javascript.*
+        mod_gzip_item_include mime ^text/.*
+        mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+        mod_gzip_item_exclude mime ^image/.*
+        mod_gzip_item_include handler ^cgi-script$
+</ifModule>

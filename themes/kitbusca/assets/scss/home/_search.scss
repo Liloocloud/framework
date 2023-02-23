@@ -1,0 +1,67 @@
+.liloo-form-search{
+    // width: 60%;
+    // margin: 0 auto;
+    background: $color-secondary-overlay;
+    padding: 10px;
+
+    
+    & form{
+        // position: sticky !important;
+        // position: -webkit-sticky !important;
+        // top: 100px !important;
+        z-index: 9 !important;
+    }
+
+    @include border();
+
+    & input{
+        width: 100% !important;
+        &::-webkit-input-placeholder { color: $color-secondary !important; }
+        &:-moz-placeholder { color: $color-secondary !important; } /* Firefox 18- */
+        &::-moz-placeholder { color: $color-secondary !important; } /* Firefox 19+ */
+        &:-ms-input-placeholder { color: $color-secondary !important; }
+    }
+  
+    & button {
+        padding: 0 18.5px !important;
+    }
+
+    & .first {
+        @include border-first()
+    }
+
+    & .last {
+       @include border-last()
+    }
+
+    & .uk-inline{
+        display: block !important;
+        & span{
+            color: $color-secondary;
+            left: 8 !important;
+            z-index: 99;
+            margin-top: 3px;
+        }
+    }
+
+}
+
+// Media depois de 640px
+@media screen and (max-width: 640px) {
+    .liloo-form-search{
+        width: 95%;
+        & .first {
+            @include border-top()
+        }
+        & .last {
+            @include border-bottom()
+        }
+    }
+}
+
+// Media depois de 980px
+@media screen and (max-width: 980px) {
+    .liloo-form-search{
+        width: 85%;
+    }
+}

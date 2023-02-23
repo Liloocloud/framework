@@ -1,0 +1,27 @@
+@import 'reset';
+@import '_vars';
+@import 'mixin';
+@import 'globals';
+
+/* HOME  */
+@import 'home/banner'; // Banner Top
+@import 'home/search'; // Buscador
+@import 'home/categories'; // Categorias
+@import 'home/destaques'; // Destaques
+
+/* Menu */
+@import '_nav';
+
+/* Botão */
+@import '_btn';
+
+/* Listview */
+@import '_listview';
+
+/* Modal */
+@import '_modal';
+
+/* Footer */
+@import '_footer';
+
+

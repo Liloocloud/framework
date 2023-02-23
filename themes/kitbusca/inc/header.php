@@ -1,0 +1,227 @@
+<!-- ####################### Off-Canvas -->
+<div id="liloo-menu-top-offcanvas" class="offcanvas-overlay-left" uk-offcanvas="flip: true;">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav-default" uk-nav>
+            <li class="uk-nav-header">
+                <img class="logo" src="<?=BASE_UPLOADS?>root/logotipo-mono-escuro.png" alt="">
+            </li>
+
+            <li class="uk-parent">
+                <a href="#" aria-expanded="true">Alimentação</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="#"><i class="fas fa-burger-soda"></i> Lanchonetes</a></li>
+                    <li><a href="#"><i class="fas fa-pizza-slice"></i> Pizzarias</a></li>
+                    <li><a href="#"><i class="fas fa-fish-cooked"></i> Comida Japonesa</a></li>
+                    <li><a href="#"><i class="fas fa-hamburger"></i> Hamburguerias</a></li>
+                    <li><a href="#"><i class="fas fa-ice-cream"></i> Sorveterias</a></li>
+                    <li><a href="#"><i class="fas fa-soup"></i> Cafeterias</a></li>
+                    <li><a href="#"><i class="fas fa-steak"></i> Açougues</a></li>
+                    <li><a href="#"><i class="fas fa-bread-loaf"></i> Padarias</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-basket"></i> Supermercados</a></li>
+                    <li><a href="#"><i class="fas fa-apple-crate"></i> Mercearias</a></li>
+                </ul> 
+            </li>
+
+            <li class="uk-parent">
+                <a href="#" aria-expanded="true">Agências</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="<?= BASE ?>empresas/marketing-digital/"><i class="fas fa-car-mechanic"></i> Marketing Digital</a></li>
+                    <li><a href="<?= BASE ?>empresas/bancarias/"><i class="fas fa-oil-can"></i> Bancárias</a></li>
+                    <li><a href="<?= BASE ?>empresas/empregos/"><i class="fas fa-parking-circle"></i> Empregos</a></li>
+                    <li><a href="<?= BASE ?>empresas/publicidade/"><i class="fas fa-car-bump"></i> Publicidade</a></li>
+                    <li><a href="<?= BASE ?>empresas/correios/"><i class="fas fa-car-wash"></i> Correios</a></li>
+                    <li><a href="<?= BASE ?>empresas/intercambio/"><i class="fas fa-gas-pump"></i> Intercambio</a></li>
+                    <li><a href="<?= BASE ?>empresas/turismo/"><i class="fas fa-car-battery"></i> Turismo</a></li>
+                    <li><a href="<?= BASE ?>empresas/talentos/"><i class="fas fa-key"></i> Talentos</a></li>
+                    <li><a href="<?= BASE ?>empresas/seguros/"><i class="fas fa-swatchbook"></i> Seguros</a></li>
+                </ul>
+            </li>
+
+            <li class="uk-parent">
+                <a href="#" aria-expanded="true">Serviços Automotivos</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="#"><i class="fas fa-car-mechanic"></i> Oficina Mecânica</a></li>
+                    <li><a href="#"><i class="fas fa-oil-can"></i> Troca de Óleo</a></li>
+                    <li><a href="#"><i class="fas fa-parking-circle"></i> Estacionamentos</a></li>
+                    <li><a href="#"><i class="fas fa-car-bump"></i> Guincho</a></li>
+                    <li><a href="#"><i class="fas fa-car-wash"></i> Lava Rápido</a></li>
+                    <li><a href="#"><i class="fas fa-gas-pump"></i> Postos</a></li>
+                    <li><a href="#"><i class="fas fa-car-battery"></i> Auto Elétrica</a></li>
+                    <li><a href="#"><i class="fas fa-key"></i> Concessionárias</a></li>
+                    <li><a href="#"><i class="fas fa-swatchbook"></i> Funilaria</a></li>
+                </ul> 
+            </li>
+
+            <li class="uk-parent">
+                <a href="#" aria-expanded="true">Mais</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="<?= BASE ?>empresas/imobiliarias/"><i class="fas fa-burger-soda"></i> Imobiliárias</a></li>
+                    <li><a href="<?= BASE ?>empresas/salao-de-beleza/"><i class="fas fa-pizza-slice"></i> Salões de Baleza</a></li>
+                    <li><a href="<?= BASE ?>empresas/academias/"><i class="fas fa-fish-cooked"></i> Academias</a></li>
+                    <li><a href="<?= BASE ?>empresas/portaria-e-limpeza/"><i class="fas fa-hamburger"></i> Portaria e Limpeza</a></li>   
+                    <li><a href="<?= BASE ?>empresas/servicos-financeiros/"><i class="fas fa-ice-cream"></i> Serviços Financeiros</a></li>
+                    <li><a href="<?= BASE ?>empresas/clinicas-odontologicas/"><i class="fas fa-soup"></i> Clínicas Odontológicas</a></li>
+                    <li><a href="<?= BASE ?>empresas/veterinarias/"><i class="fas fa-steak"></i> Veterinárias</a></li>
+                    <li><a href="<?= BASE ?>empresas/saude-e-medicina/"><i class="fas fa-bread-loaf"></i> Saúde & Medicina</a></li>
+                    <li><a href="<?= BASE ?>empresas/hoteis-e-viagem"><i class="fas fa-shopping-basket"></i> Hotéis & Viagem</a></li>
+                    <li><a href="<?= BASE ?>empresas/educacao/"><i class="fas fa-apple-crate"></i> Educação</a></li>
+                </ul>
+            </li>
+
+            <?php frontend_builder_menu(json_encode(MENU_TOP))?>
+        </ul>
+    </div>
+</div>
+
+<!-- ####################### Menu Desktop -->
+<div id="liloo-menu-top-desktop" class="uk-box-shadow-small uk-visible@m" style="background-color: #f8f8f8;" uk-sticky>
+    <nav class="uk-navbar-container" uk-navbar="mode: click" style="z-index:999;">
+        <a class="uk-navbar-item uk-logo" href="<?=BASE?>">
+            <img class="logo" src="<?=BASE_UPLOADS?>root/logotipo.png" alt="Serviços de Limpeza Residencial e Comercial em Santos e Região" width="100px">
+        </a>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <div class="uk-navbar-item">
+                    
+                    <!-- Alimentação -->
+                    <a href="#" class="uk-button uk-button-link">Alimentação <i uk-icon="icon: triangle-down"></i></a>
+                    <div class="uk-width-large" uk-dropdown>
+                        <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/lanchonetes/"><i class="fas fa-burger-soda"></i> Lanchonetes</a></li>
+                                    <li><a href="<?= BASE ?>empresas/pizzarias/"><i class="fas fa-pizza-slice"></i> Pizzarias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/comida-japonesa/"><i class="fas fa-fish-cooked"></i> Comida Japonesa</a></li>
+                                    <li><a href="<?= BASE ?>empresas/hamburguerias/"><i class="fas fa-hamburger"></i> Hamburguerias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/sorveterias/"><i class="fas fa-ice-cream"></i> Sorveterias</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/cafeterias/"><i class="fas fa-soup"></i> Cafeterias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/acougues/"><i class="fas fa-steak"></i> Açougues</a></li>
+                                    <li><a href="<?= BASE ?>empresas/padarias/"><i class="fas fa-bread-loaf"></i> Padarias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/supermercados/"><i class="fas fa-shopping-basket"></i> Supermercados</a></li>
+                                    <li><a href="<?= BASE ?>empresas/mercearias/"><i class="fas fa-apple-crate"></i> Mercearias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agencias -->
+                    <a href="#" class="uk-button uk-button-link">Agências <i uk-icon="icon: triangle-down"></i></a>
+                    <div class="uk-width-large" uk-dropdown>
+                        <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/marketing-digital/"><i class="fas fa-car-mechanic"></i> Marketing Digital</a></li>
+                                    <li><a href="<?= BASE ?>empresas/bancarias/"><i class="fas fa-oil-can"></i> Bancárias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/empregos/"><i class="fas fa-parking-circle"></i> Empregos</a></li>
+                                    <li><a href="<?= BASE ?>empresas/publicidade/"><i class="fas fa-car-bump"></i> Publicidade</a></li>
+                                    <li><a href="<?= BASE ?>empresas/correios/"><i class="fas fa-car-wash"></i> Correios</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/intercambio/"><i class="fas fa-gas-pump"></i> Intercambio</a></li>
+                                    <li><a href="<?= BASE ?>empresas/turismo/"><i class="fas fa-car-battery"></i> Turismo</a></li>
+                                    <li><a href="<?= BASE ?>empresas/talentos/"><i class="fas fa-key"></i> Talentos</a></li>
+                                    <li><a href="<?= BASE ?>empresas/seguros/"><i class="fas fa-swatchbook"></i> Seguros</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Serviços Automotivos -->
+                    <a href="#" class="uk-button uk-button-link">Serviços Automotivos <i uk-icon="icon: triangle-down"></i></a>
+                    <div class="uk-width-large" uk-dropdown>
+                        <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/oficina-mecanica/"><i class="fas fa-car-mechanic"></i> Oficina Mecânica</a></li>
+                                    <li><a href="<?= BASE ?>empresas/troca-de-oleo/"><i class="fas fa-oil-can"></i> Troca de Óleo</a></li>
+                                    <li><a href="<?= BASE ?>empresas/estacionamento/"><i class="fas fa-parking-circle"></i> Estacionamentos</a></li>
+                                    <li><a href="<?= BASE ?>empresas/guincho/"><i class="fas fa-car-bump"></i> Guincho</a></li>
+                                    <li><a href="<?= BASE ?>empresas/lava-rapido/"><i class="fas fa-car-wash"></i> Lava Rápido</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/postos/"><i class="fas fa-gas-pump"></i> Postos</a></li>
+                                    <li><a href="<?= BASE ?>empresas/auto-eletrica/"><i class="fas fa-car-battery"></i> Auto Elétrica</a></li>
+                                    <li><a href="<?= BASE ?>empresas/concessionarias/"><i class="fas fa-key"></i> Concessionárias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/funilaria/"><i class="fas fa-swatchbook"></i> Funilaria</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mais -->
+                    <a href="#" class="uk-button uk-button-link">Mais <i uk-icon="icon: triangle-down"></i></a>
+                    <div class="uk-width-large" uk-dropdown>
+                        <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/imobiliarias/"><i class="fas fa-burger-soda"></i> Imobiliárias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/salao-de-beleza/"><i class="fas fa-pizza-slice"></i> Salões de Baleza</a></li>
+                                    <li><a href="<?= BASE ?>empresas/academias/"><i class="fas fa-fish-cooked"></i> Academias</a></li>
+                                    <li><a href="<?= BASE ?>empresas/portaria-e-limpeza/"><i class="fas fa-hamburger"></i> Portaria e Limpeza</a></li>   
+                                    <li><a href="<?= BASE ?>empresas/servicos-financeiros/"><i class="fas fa-ice-cream"></i> Serviços Financeiros</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="<?= BASE ?>empresas/clinicas-odontologicas/"><i class="fas fa-soup"></i> Clínicas Odontológicas</a></li>
+                                    <li><a href="<?= BASE ?>empresas/veterinarias/"><i class="fas fa-steak"></i> Veterinárias</a></li>
+                                    
+                                    <li><a href="<?= BASE ?>empresas/saude-e-medicina/"><i class="fas fa-bread-loaf"></i> Saúde & Medicina</a></li>
+                                    <li><a href="<?= BASE ?>empresas/hoteis-e-viagem"><i class="fas fa-shopping-basket"></i> Hotéis & Viagem</a></li>
+                                    <li><a href="<?= BASE ?>empresas/educacao/"><i class="fas fa-apple-crate"></i> Educação</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </ul>
+        </div>
+        <div class="uk-navbar-right">
+            <div class="uk-visible@m">
+                <ul class="uk-navbar-nav">
+                    <div class="uk-navbar-item">
+                        <a href="<?= BASE ?>seja-um-profissional/" class="uk-button uk-button-link">Para empresas</a>
+                        <?php if(empty($_SESSION['account_id'])) :?>
+                            <a href="<?= BASE_ADMIN ?>" class="uk-button uk-button-default" target="_blank">Acessar</a>
+                            <a href="<?= BASE ?>conta/cadastre-se/" class="uk-button uk-button-secondary">Cadastre-se</a>
+                        <?php else: ?>
+                            <a href="<?= BASE_ADMIN ?>" class="uk-button uk-button-default" target="_blank">Voltar ao Painel</a>
+                        <?php endif; ?>
+                    </div>
+
+                </ul>
+            </div>
+            <div class="uk-hidden@m">
+                <a href="#" class="uk-button" uk-navbar-toggle-icon uk-toggle="target: #offcanvas"></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- ####################### Menu Mobile -->
+<div id="liloo-menu-top-mobile" class="uk-box-shadow-small uk-hidden@m" style="background-color: #f8f8f8;" uk-sticky>
+    <nav class="uk-navbar-container" uk-navbar="mode: click">
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="<?=BASE?>">
+                <img class="logo" src="<?=BASE_UPLOADS?>root/logotipo.png" alt="">
+            </a>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <div class="uk-navbar-item">
+                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #liloo-menu-top-offcanvas"></a>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</div>

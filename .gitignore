@@ -1,5 +1,14 @@
-# Framework Liloo
+### Framework Liloo ###
+
 _kernel/libs/*
+_kernel/libs/*
+
 # !_kernel/__Kernel.php
 
+
+### Importantes ###
 composer.lock
+.vscode
+php.ini
+*.txt
+

@@ -1,0 +1,12 @@
+.uk-modal-dialog{
+    @include borderRadius;
+
+    & .uk-modal-header{
+        @include border-top;   
+    }
+
+    & .uk-modal-footer {
+        @include border-bottom;
+    }
+
+}
