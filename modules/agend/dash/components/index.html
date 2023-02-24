@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app" class="uk-container uk-padding"></div>
+
+    <a href="#" list-accounts class="uk-button uk-button-primary">Testar</a>
+
+    <!-- <script src="./liloo.js"></script> -->
+    <!-- <script src="./liloo2.js" type="module"></script> -->
+
+    <script type="module">
+        import { Accounts } from './listview/accounts.js'
+        // $('[list-accounts]').on('click', () => {
+            Accounts.listAccountsCardUikit({
+                url: 'https://liloo.com.br/modules/accounts/create/',
+                method: 'POST',
+                element: '#app'
+            })
+        // })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+
+#search-products ul li{
+    padding: 10px;
+}
+
+#search-products ul li .prod-code{
+    font-size: 12px;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+#search-products ul li .prod-price{
+    font-size: 14px;
+    font-weight: bold !important;
+}
+
+
+
+/* Dark */
+[liloo-mode="dark"] .uk-tab li a{
+    color: #fff !important;
+}
+[liloo-mode="dark"] #search-products ul li .prod-code{
+    background-color: #0e0e0e !important;
+}
+
+[liloo-mode="dark"] #search-products ul li:hover{
+    background-color: #202020 !important;
+    border-radius: 7px;
+}

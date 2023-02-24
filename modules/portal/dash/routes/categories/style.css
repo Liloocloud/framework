@@ -1,0 +1,26 @@
+﻿#liloo-list-categories .list-categ{
+    border-bottom: 1px #dedede solid;
+    padding-bottom: 20px;
+}
+#liloo-list-categories .list-subcateg{
+    border-bottom: 1px #dedede solid; 
+    padding: 5px 0;
+}
+.list-subcateg a{
+    width: 30px;
+    height: 30px;
+}
+.list-subcateg a svg{
+    width: 16px;
+    color: #a6a6a6;
+}
+.list-subcateg [uk-drop]{
+    z-index: 99999999 !important; 
+    width: 220px;
+}
+
+.uk-card ul li .uk-icon-button{
+    width: 30px;
+    height: 30px;
+    color: #a6a6a6;
+}

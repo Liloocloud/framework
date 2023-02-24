@@ -1,0 +1,52 @@
+.liloo-table{ font-size: 14px; }
+.liloo-table tbody tr{ padding: 0 20px !important; }
+@media (min-width: 1200px){
+    .liloo-table tbody tr td{ padding-left: 40px !important;}
+}
+a:hover{ text-decoration: none; }
+.liloo-funil div{
+    margin-bottom: 5px !important;
+    margin: 0 auto;
+    padding: 2% 0;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.liloo-all-reports [uk-spinner] svg{
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 3px 0px;
+}
+
+.liloo-reports-channels .uk-card:hover{
+    cursor: pointer;
+    background: #f8f8f8 !important;
+}
+
+// Blocao de Listagem dos leads
+.list-lead {
+    & .list-item{
+        background: #f8f8f8;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 10px;
+    }
+}
+.list-lead .uk-card-body{
+    // min-height: 300px; 
+    max-height: 350px; 
+    overflow-y: scroll;
+}
+
+[liloo-mode="dark"] .list-lead {
+    & .list-item{
+        background: #1d1d1d;
+    }
+}
+
+// Bloco dos grids dos canais de marketing
+#grid-channels{
+    & .uk-card h4 span{
+        font-weight: bold !important;
+    }
+}

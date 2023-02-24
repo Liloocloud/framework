@@ -1,0 +1,20 @@
+/**
+Costumização do FullCalendar
+*/
+
+.fc-button{
+    font-size: 0.8em !important;
+}
+.fc-toolbar-title{
+    font-size: 1.2em !important;
+}
+
+.fc-col-header-cell-cushion{
+    text-transform: capitalize;
+    font-weight: 600;
+    border: none;
+}
+.fc-col-header-cell-cushion:hover{
+    text-decoration: none;
+}
+

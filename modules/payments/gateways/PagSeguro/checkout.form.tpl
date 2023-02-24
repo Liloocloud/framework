@@ -1,0 +1,1 @@
+<!-- Incluir o formulário do checkout que será usado na frontend -->

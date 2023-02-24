@@ -1,0 +1,48 @@
+/* Widgets */
+.liloo-widgets {
+    padding-right: 10px;
+    position: absolute;
+    top: 120px;
+    bottom: 30px;
+    overflow-y: auto;
+}
+
+.liloo-widgets div div {
+    cursor: pointer;
+}
+
+.liloo-widgets .upgrade {
+    background-color: #1b1b1b;
+    font-size: 10px;
+    font-weight: bold !important;
+    padding: 2px 5px;
+    color: #9d9d9d;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+[liloo-mode='dark'] .liloo-widgets div div:hover {
+    background-color: #353535 !important;
+}
+
+/* Canva */
+.liloo-canva{
+    border: 2px dashed #353535;
+}
+[liloo-mode='dark'] .liloo-canva{
+    color: #e4e4e4;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .liloo-widgets {
+        position: initial !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .liloo-widgets div div{
+        padding: 15px;
+    }
+}

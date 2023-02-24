@@ -1,0 +1,26 @@
+[liloo-mode="dark"] .uk-nav li a {
+    color: #fff !important;
+}
+
+#menu-top-create {
+    position: fixed;
+    top: 60px;
+    width: calc(100% - 225px);
+    z-index: 200;
+    background: #f7f7f7;
+    height: 73px;
+    left: 225px;
+    padding: 0 20px;
+
+}
+
+[liloo-mode="dark"] #menu-top-create {
+    background: #232323;
+}
+
+@media only screen and (max-width: 680px) {
+    #menu-top-create {
+        width: 100% !important;
+        left: 0;
+    }
+}

@@ -11,7 +11,7 @@
 // URL de Produção
 define('SITE_URL_REMOTE', 'https://kitbusca.com/');
 // URL de desenvolvimento
-define('SITE_URL_LOCAL', 'http://localhost/kitbusca/');
+define('SITE_URL_LOCAL', 'http://localhost/liloo/framework-php/');
 // Nome do Projeto ou Site 
 define('SITE_NAME', 'Kitbusca');
 // Título do Site

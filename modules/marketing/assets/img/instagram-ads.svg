@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="5000px" height="3358px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 898 603"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil2 {fill:#DD1C89}
+    .fil1 {fill:#FBD921}
+    .fil3 {fill:#FFFEFE}
+    .fil0 {fill:url(#id0)}
+    .fnt0 {font-weight:bold;font-size:122.72px;font-family:'Arial'}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="71.9365" y1="112.969" x2="530.986" y2="489.953">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FBD921"/>
+   <stop offset="0.490196" style="stop-opacity:1; stop-color:#DD1C89"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#821CC3"/>
+  </linearGradient>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0" cx="301" cy="301" r="301"/>
+  <rect class="fil1" x="496" y="265" width="402" height="190" rx="25" ry="25"/>
+  <text x="594" y="403"  class="fil2 fnt0">Ads</text>
+  <path class="fil3" d="M171 347l0 -84c0,-34 3,-53 22,-72 19,-19 37,-21 72,-21l65 0c11,0 37,-1 47,2 4,1 2,0 5,2 13,1 31,18 36,25 9,12 15,28 15,48l0 72c0,42 4,66 -21,91 -26,25 -50,21 -92,21l-72 0c-19,0 -33,-4 -46,-13 -7,-4 -25,-22 -25,-34 -7,-7 -5,-26 -6,-37zm-27 -121l0 99c0,19 -2,46 2,65 2,14 9,25 16,35 3,4 5,6 10,11 2,3 8,7 12,10 16,10 21,8 30,12l1 1c6,-1 23,0 31,0 10,0 21,0 31,0l42 0c22,0 49,2 70,-1 14,-4 25,-8 36,-16l10 -8c12,-12 19,-25 24,-46 3,-21 1,-45 1,-66l0 -46c0,-11 0,-21 0,-32 0,-7 -1,-24 0,-30 -2,-3 -3,-8 -4,-11 -5,-17 -12,-26 -23,-37 -3,-3 -4,-4 -8,-7 -7,-5 -12,-7 -19,-11 -19,-5 -25,-6 -46,-6l-57 0 -76 1c-25,1 -45,12 -58,25 -15,17 -24,32 -25,58z"/>
+  <path class="fil3" d="M250 316c-10,-23 7,-59 38,-67 8,-2 22,-3 30,2 14,0 30,19 35,35 3,11 3,22 -1,32 -17,51 -90,46 -102,-2zm32 -95l-6 3c-36,12 -57,46 -54,87l5 21c5,8 7,13 12,20 5,6 10,11 17,16 13,9 32,15 52,14 43,-5 69,-34 74,-76 1,-21 -5,-40 -14,-53 -6,-7 -10,-12 -16,-17 -7,-5 -14,-7 -21,-12 -8,-2 -13,-4 -23,-5 -9,0 -18,2 -26,2z"/>
+  <path class="fil3" d="M381 197c-25,11 -9,45 13,36 23,-8 11,-45 -13,-36z"/>
+ </g>
+</svg>

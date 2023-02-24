@@ -1,0 +1,9 @@
+.uk-list li{
+    padding: 0 !important;
+    margin: 0px !important;
+}
+.uk-card [uk-spinner]{
+    width: 14px;
+    margin-left: 5px;
+    color: black;
+}

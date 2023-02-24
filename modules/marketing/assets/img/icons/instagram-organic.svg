@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="5000px" height="3358px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 614 412"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil2 {fill:#821CC3}
+    .fil1 {fill:#FBD921}
+    .fil3 {fill:#FFFEFE}
+    .fil0 {fill:url(#id0)}
+    .fnt0 {font-weight:bold;font-size:83.904px;font-family:'Arial'}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="49.1834" y1="77.2375" x2="363.038" y2="334.984">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FBD921"/>
+   <stop offset="0.490196" style="stop-opacity:1; stop-color:#DD1C89"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#821CC3"/>
+  </linearGradient>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0" cx="206" cy="206" r="206"/>
+  <rect class="fil1" x="339" y="181" width="275" height="130" rx="17" ry="17"/>
+  <text x="380" y="276"  class="fil2 fnt0">SMM</text>
+  <path class="fil3" d="M117 237l0 -57c0,-23 2,-36 15,-49 13,-13 25,-15 49,-15l45 0c7,0 25,0 32,2 2,0 1,0 3,1 9,0 21,12 25,17 6,8 10,19 10,33l0 49c0,29 3,45 -15,63 -17,17 -33,14 -62,14l-50 0c-13,0 -22,-3 -31,-9 -5,-3 -17,-15 -17,-23 -5,-5 -4,-18 -4,-26zm-19 -83l0 68c0,14 -1,32 2,45 1,9 6,17 11,24 2,2 3,4 6,7 2,2 6,5 9,7 10,6 14,6 20,8l1 1c4,-1 16,0 21,0 7,0 14,0 21,0l29 0c15,0 34,1 48,-1 10,-2 17,-5 25,-11l6 -6c9,-7 13,-17 17,-31 2,-14 1,-30 1,-45l0 -31c0,-8 0,-15 0,-22 0,-5 -1,-17 -1,-21 -1,-2 -1,-5 -2,-7 -4,-12 -9,-18 -16,-25 -2,-3 -3,-3 -6,-5 -4,-3 -8,-5 -13,-8 -13,-3 -16,-4 -31,-4l-39 0 -52 0c-17,1 -31,9 -39,18 -11,11 -17,22 -18,39z"/>
+  <path class="fil3" d="M171 216c-7,-16 5,-41 26,-46 5,-1 15,-2 20,1 10,1 21,13 24,25 2,7 2,15 0,21 -12,36 -62,32 -70,-1zm22 -65l-5 2c-24,8 -38,32 -36,59l3 15c4,5 5,9 9,14 3,4 6,7 11,11 9,6 22,10 36,9 29,-3 47,-23 50,-52 1,-14 -3,-27 -10,-36 -3,-5 -6,-8 -11,-12 -4,-3 -9,-5 -13,-8 -6,-1 -10,-3 -16,-3 -7,-1 -13,1 -18,1z"/>
+  <path class="fil3" d="M261 135c-18,7 -7,30 9,25 15,-6 7,-32 -9,-25z"/>
+ </g>
+</svg>

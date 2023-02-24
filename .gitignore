@@ -2,7 +2,6 @@
 
 _Kernel/Libs/*
 uploads/*
-modules/*
 
 # !_kernel/__Kernel.php
 
@@ -12,4 +11,5 @@ composer.lock
 .vscode
 php.ini
 *.txt
-
+*.xlsx
+*.doc

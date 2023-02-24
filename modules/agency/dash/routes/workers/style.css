@@ -1,0 +1,238 @@
+/* Ajustes */
+.uk-form-icon {
+    border-radius: 4px;
+    margin: 3px;
+}
+
+.uk-form-icon:hover {
+    background-color: #ececec;
+}
+
+.uk-form-icon svg {
+    width: 17px;
+}
+.workers-list .uk-list li {
+    padding: 8px 15px 8px 17px !important
+}
+.workers-list #agency_workers_list {
+    max-height: 450px;
+    min-height: 30px;
+    overflow-y: auto;
+}
+.uk-modal-full .uk-list li{
+    padding: 0 !important;
+    margin: 0px !important;
+}
+
+
+
+@media only screen and (max-width: 680px) {
+
+    /* #liloo-admin-content{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    } */
+    .liloo-content {
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+.liloo-overflow .ui {
+    height: calc(100vh - 80px);
+    display: grid;
+    grid-template-rows: 1fr;
+    /* background-color: #0079bf; */
+    color: #eee;
+    /* margin: 0 -55px !important; */
+    /* padding: 15px; */
+}
+
+/* .navbar {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+} */
+/* .navbar.app {
+    background-color: #0067a3;
+    font-size: 1.5rem;
+} */
+.liloo-overflow .navbar.board {
+    font-size: 1.1rem;
+}
+
+
+/* TODAS AS LISTAS */
+.liloo-overflow .lists {
+    display: flex;
+    overflow-x: auto;
+}
+
+.liloo-overflow .lists>* {
+    flex: 0 0 auto;
+    margin-left: 10px;
+}
+
+.liloo-overflow .lists::after {
+    content: "";
+    flex: 0 0 10px;
+}
+
+/* COLUNA - LIST */
+.liloo-overflow .list {
+    width: 300px;
+    height: calc(100% - 10px - 17px);
+}
+
+.liloo-overflow .list>* {
+    background-color: #e2e4e6;
+    color: #333;
+    padding: 0 10px;
+}
+
+.liloo-overflow .list header {
+    line-height: 40px;
+    font-size: 18px;
+    /* font-weight: bold; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.liloo-overflow .list footer {
+    line-height: 36px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #888;
+}
+
+.liloo-overflow .list ul {
+    list-style: none;
+    margin: 0;
+    max-height: calc(100% - 36px - 36px);
+    min-height: 30px;
+    overflow-y: auto;
+}
+
+.liloo-overflow .list ul li {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 7px;
+}
+
+.liloo-overflow .list ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.liloo-overflow .list ul li img {
+    display: block;
+    /* width: calc(100% + 2 * 10px); */
+    /* margin: -10px 0 10px -10px; */
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/* CARD */
+.list-card-matrix {
+    color: #1f1f1f;
+}
+
+.list-card-matrix a {
+    color: #1f1f1f;
+}
+
+.list-card-matrix a:hover {
+    text-decoration: none;
+    /* cursor: pointer; */
+}
+
+.list-card-matrix {
+    width: 280px;
+}
+
+.list-card-matrix li:hover {
+    background-color: #f7f7f7 !important;
+}
+
+.list-card-matrix li:active {
+    background-color: #fffde4 !important;
+    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    position: relative;
+    /* cursor: move; */
+}
+
+.list-card-matrix li a:not() {
+    background-color: #fffde4 !important;
+}
+
+
+.list-card-matrix h5 {
+    text-transform: capitalize !important;
+    font-weight: 500;
+    margin: 0;
+}
+
+.list-card-matrix p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+/* AJUSTES */
+.liloo-click-rotate {
+    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    position: relative;
+    /* cursor: move; */
+}
+
+.liloo-btn-plus {
+    background: #debe05;
+    color: #191919;
+    width: 38px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 64px;
+    padding: 0px 11px 0px 11px;
+    -webkit-box-shadow: 0px 2px 26px 0px rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0px 2px 26px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 26px 0px rgb(0 0 0 / 15%);
+    z-index: 999999;
+}
+
+.liloo-btn-plus:hover {
+    text-decoration: none;
+    background: #d3b400;
+    color: #191919;
+}
+
+
+/* Ajuste Datepicker */
+.daterangepicker select.hourselect,
+.daterangepicker select.minuteselect {
+    width: 46%;
+    margin: 0 0 0 0;
+    background: #eee;
+    border: 1px solid #eee;
+    padding: 6px;
+    outline: 0;
+    font-size: 14px;
+}
+
+.daterangepicker .calendar-time {
+    margin: 15px 6px 0 0;
+    line-height: 20px;
+    position: relative;
+}
