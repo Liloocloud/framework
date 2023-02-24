@@ -10,6 +10,9 @@ require_once "_Kernel/___Kernel.php";
 require_once ROOT_THEME."__config.theme.php";
 require_once ROOT_THEME."__fun.theme.php";
 
+var_dump(URL());
+
+
 $Configs = _get_data_table(TB_OPTIONS);
 $Config = [];
 foreach ($Configs as $Docty){

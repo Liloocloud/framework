@@ -1,7 +1,7 @@
 ### Framework Liloo ###
 
-_kernel/libs/*
-_kernel/libs/*
+_Kernel/Libs/*
+uploads/*
 
 # !_kernel/__Kernel.php
 
