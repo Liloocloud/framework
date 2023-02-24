@@ -1,0 +1,190 @@
+
+(async () => {
+  console.log( await getAuthToken() );
+})();
+
+Esse é o problema:
+https://pt.stackoverflow.com/questions/424321/callback-em-fun%C3%A7%C3%A3o-an%C3%B4nima-retorna-undefined
+
+https://pt.stackoverflow.com/questions/117392/ajax-javascript-puro-ass%c3%adncrono?rq=1
+
+function getData(ajaxurl) { 
+  return $.ajax({
+    url: ajaxurl,
+    type: 'GET',
+  });
+};
+
+async function test() {
+  try {
+    const res = await getData('https://api.icndb.com/jokes/random')
+    console.log(res)
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+test();
+
+getData(ajaxurl).then(function(res) {
+    console.log(res)
+}
+----------------------------------
+// Lilo.Sender(URL, dataBuild).then(function (res) {
+        //     console.log(res)
+        // })
+
+        // let Res = Lilo.Sender(URL, dataBuild);
+        // let Fim = Res.then(function (e) {
+        //     return e
+        // })
+
+        // console.log(
+        //     Res.backend,
+        //     Res.message,
+        //     Fim
+        // )
+----------------------------------
+
+Sender:
+Envia os dados para a backend
+retornando JSON, ARRAY ou TEXT 
+dependendo do propósito do projto
+
+RequestServer:
+Monta a requisição para utilizar 
+a função "Sender"
+
+Elements:
+Faz a leitura de todos os elementos 
+filho da tag <app> deixado disponivel
+para uso de outros objetos
+
+Compiler:
+Faz a leitura do element HTML (DOM)
+identificando o atributo request e em 
+seguida chama a função 'Render' 
+
+Render:
+Captura o Component setado 
+pelo Compiler para povoar utilizando 
+o retorno do RequestServer.
+
+Document:
+Joga todo o conteudo document na varial 'app'
+var app = document.body.querySelector('app')
+
+View (createElement('root'))
+// Cria o elemento padrão 'root' que recebera a renderização dos componentes
+// app.prepend(document.createElement('root'))
+
+// Esconde todos os elementos para aguardar a renderização 
+// app.style.visibility = "hidden"
+// app.style.display = "none"
+
+
+Atribute: function (el, attr) {
+    return app.querySelector(el).getAttribute(attr)
+}
+
+Talvez usar uma Promise pra receber o response
+pois estou tendo problemas no retorno para povoar
+os componentes
+
+import dinimic
+https://www.youtube.com/watch?v=zjN7pbK7aKQ
+
+
+-------------------------------------------------
+
+// class IO {
+
+        //     /**
+        //      * Método construtor
+        //      * @param {*} altura 
+        //      * @param {*} largura 
+        //      */
+        //     constructor(app) {
+        //         this.app = document.querySelectorAll('app > *')
+        //     }
+
+        //     get Con(){
+        //         return this.Ajax()
+        //     }
+
+        //     Ajax() {
+        //         $.ajax({
+        //             type: 'POST',
+        //             url: 'https://busqueja.com.br/frontend/busqueja/_php/Lilo.php',
+        //             cache: false,
+        //             data: { 
+        //                 action: 'lilo_api',
+        //                 alldata: { '1': { 'name': 'action', 'value': '' } }
+        //             },
+        //             dataType: 'json',
+
+        //             success: function (data) {
+                        
+        //                 return data
+        //             }
+        //         })
+        //     }
+
+
+        // }
+
+        // const Test = new IO()
+
+        // console.log(Test.Con)
+
+
+---------------------------------------------------------
+
+
+                /**
+                 * Renderiza os components
+                 */
+                // Verifica qual o componente 
+                // Importa o component
+                // 
+                // const Comp = import('./components/' + Component + '/' + Component + '.js')
+
+                // card.then((res) => {
+                //     console.log(res)
+                // })
+
+
+                // Comp.card({
+                //     title: 'Título',
+                //     content: 'conteúdo',
+                //     href: '#link',
+                //     button: 'Enviar'
+                // }).then(function (ress) {
+                //     console.log(ress)
+                // })
+
+                // loop
+
+
+                // let teste = card({
+                //     title: 'Título',
+                //     content :'conteúdo',
+                //     href: '#link',
+                //     button: 'Enviar'
+                // })
+
+                // $('#queue').append(Lilo.Include('./components/card/card.js'));
+
+--------------------------------------------
+
+    // Include: function (file_path) {
+    //     var j = document.getElementsByTagName("script");
+    //     // j.type = "module";
+    //     j.src = file_path;
+    //     return j
+    // },
+
+--------------------------------------------
+  // Comps = Object.assign(Comps, { Component })
+--------------------------------------------
+

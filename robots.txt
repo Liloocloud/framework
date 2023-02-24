@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /_Kernel/
+Disallow: /_Modules/
+Disallow: /_Plugins/
+Disallow: /_Tools/
+Disallow: /console/
+Disallow: /themes/
+Disallow: /uploads/
+Sitemap: https://beegray.com.br/sitemap.xml

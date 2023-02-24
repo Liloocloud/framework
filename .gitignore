@@ -10,6 +10,6 @@ uploads/*
 composer.lock
 .vscode
 php.ini
-*.txt
+# *.txt
 *.xlsx
 *.doc

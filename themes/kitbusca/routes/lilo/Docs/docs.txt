@@ -1,0 +1,102 @@
+
+version 1.0.0 - atributo request escrito em JSON (04.11.2020)
+<card request='
+    {
+        "routeFull" : false,
+        "route": "https://busqueja.com.br/_Kernel/Frameworks/uikit/uikit",
+        "data": "account_name,account_email,account_coin",
+        "case" : "lilo_card"
+    }
+'></card>
+
+<!-- <accordion request='
+    {
+        "routeFull" : false,
+        "route" : "https://busqueja.com.br/frontend/busqueja/_php/Lilo",
+        "data" : "Título, conteúdo, botão",
+        "case" : "lilo_accordion"
+    }
+'></accordion> -->
+<!-- <api request='
+    {
+        "routeFull" : false,
+        "route" : "https://busqueja.com.br/frontend/busqueja/_php/Lilo",
+        "data" : "Este texto deve retornar para cá",
+        "case" : "lilo_api" 
+    }
+'></api> -->
+
+version 2.0.0 - onde será criado um compilador para ler o request do elemento (07.11.2020)
+<!-- Lista de resultados -->
+<card request="
+frame('bootstrap')
+table('account')
+operator('search')
+where('account_id'=='202','account_coin'>100')
+returnFields('account_name','account_email')
+numResults(100)
+paginator(5)
+getURL('https://busqueja.com.br/null/null/@var1/')
+"></card>
+
+<card request="
+frame('bootstrap')
+table('account')
+operator('search')
+where('account_id'=='202','account_coin'>100')
+returnFields('account_name','account_email')
+numResults(100)
+paginator(5)
+getURL('https://busqueja.com.br/null/null/@var1/')
+"></card>
+
+
+version 3.0.0 - Interpretador direto e muitissimo simples com tag direta auto executavel
+<card-list-accounts/>
+<sidebar-default/>
+
+version 3.1.0
+O mesmo paradigma da versão 3.0.0 somado ao modelo para criação de 
+novos componentes na area interna da seguinte forma
+--
+element: card
+frame('bootstrap')
+table('account')
+operator('search')
+where('account_id'=='202','account_coin'>100')
+returnFields('account_name','account_email')
+numResults(100)
+paginator(5)
+getURL('https://busqueja.com.br/null/null/@var1/')
+--
+Ao criar o novo componente o sistema mostrara a nova tag disponivel para uso. Exemplo:
+<card-list-bootstrap/>
+
+inputs: 
+
+Issues:
+- Como vai ser a linguagem interação - ok
+- Compilador único e não por componente
+- Segurança - ok
+- Torna-lo compativel com o mundo Node.js/Javascript 
+- Padronização de banco de dados (Generico)
+- AutoCRUD
+- Implementação de DipSwitch na Back - ok
+- Interagir com o comando returnFields eliminando a Tag HTML que não for usada
+- Criar os "Alias" das tabelas no banco de dados - ok
+- Criar as Regras do Compilador
+- Os componentes so serão executados no "load" carregamento da pagina - ok
+
+08/11/2020:
+Regras dos Elementos
+Exemplo:
+
+<account-list-card>
+account: 'retorna as informações padrões da tabela account pelo módulo account'
+list: 'Listagem de resultados'
+card: 'elemento card HTML'
+
+1. O prefixo 'account' indica o módulo que irá realizar as operações dos componentes
+2. O segundo termo 'list' indica que retornará todos os resultados
+3. Indica que será retornado em modelo 'card' HTML
+
