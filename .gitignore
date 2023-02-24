@@ -2,12 +2,15 @@
 
 _Kernel/Libs/*
 uploads/*
+themes/kitreact/
 
 # !_kernel/__Kernel.php
 
 ### Git
 .gitignore
 .git/
+libs/@materialize/
+
 
 ### Importantes ###
 composer.lock
