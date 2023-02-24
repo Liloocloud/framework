@@ -3,8 +3,8 @@
 
 ## Composer 
 - Regra composer.json opcional
-<code>
+```json
 "autoload": {
    "psr-4": {"Modules\\": "Modules/"}
 }
-</code>
+```
