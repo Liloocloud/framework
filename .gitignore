@@ -5,6 +5,9 @@ uploads/*
 
 # !_kernel/__Kernel.php
 
+### Git
+.gitignore
+.git/
 
 ### Importantes ###
 composer.lock
