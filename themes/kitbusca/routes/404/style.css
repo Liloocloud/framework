@@ -1,0 +1,14 @@
+[uk-accordion] .uk-accordion-title {
+    font-size: 18px !important;
+}
+
+[uk-accordion] li a {
+    border: 1px solid #dedede !important;
+    padding: 20px !important;
+}
+
+[uk-accordion] li .uk-accordion-content {
+    padding: 20px !important;
+    border: 1px solid #dedede !important;
+    margin-top: -1px !important;
+}

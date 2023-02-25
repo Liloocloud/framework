@@ -4,15 +4,31 @@
  * @copyright Felipe Oliveira Lourenço - 02.07.2020
  */
 
-declare (strict_types = 1);
+// declare (strict_types = 1);
 
-$Accordion = new \Components\Accordion(ROOT_COMPONENTS.'accordion/uikit.tpl');
+new \Components\Accordion([
+    'template' => ROOT_COMPONENTS . 'accordion/uikit.tpl',
+    'content' => [
+        ['title' => 'Primeiro', 'text' => 'lorem impsum'],
+        ['title' => 'Segundo', 'text' => 'lorem impsum'],
+        ['title' => 'terceiro', 'text' => 'lorem impsum'],
+    ],
+    'sql' => [
+        'table' => TB_SHOP_PRODUCTS,
+        'where' => ['prod_account_id' => 16],
+        'fields' => [
+            'title' => 'prod_title',
+            'text' => 'prod_description',
+        ],
+    ],
+], function ($res) {
+    echo '<div class="uk-container">';    
+    echo $res;
+    echo '</div>';
 
+});
 
-$Accordion->render();
-
-
-
+// $Accordion->render();
 
 // $update = new Database\Update;
 // $T = $update->ExeUpdate(
