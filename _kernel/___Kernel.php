@@ -158,6 +158,11 @@ $Extra['ROOT_FRAMEWORK'] = ROOT_FRAMEWORK;
 define('ROOT_UPLOADS', ROOT . 'uploads/');
 $Extra['ROOT_UPLOADS'] = ROOT_UPLOADS;
 
+// Caminho absoluto para a pasta padrão dos Compoentes
+define('ROOT_COMPONENTS', ROOT . '_Kernel/Src/components/');
+$Extra['ROOT_COMPONENTS'] = ROOT_COMPONENTS;
+
+
 /*******************************************************************
  * TABELAS NATIVAS DA PLATAFORMA
  */
@@ -248,6 +253,7 @@ if (!isset($_SESSION) && empty($_SESSION)) {
 require_once ROOT_KERNEL . "DBSA.inout.php";
 require_once ROOT_KERNEL . 'Globals.inout.php';
 // require_once ROOT_KERNEL."Ciclo.inout.php";
+require_once ROOT."_Kernel/Libs/autoload.php";
 
 /*******************************************************************
  * INICIA FUNÇÕES GLOBAIS QUE NÃO USAM CLASSES, PARA EVITAR CONFLITOS

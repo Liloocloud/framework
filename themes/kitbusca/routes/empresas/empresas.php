@@ -7,11 +7,11 @@
 if(!isset($_COOKIE['click_ads'])){
     @setcookie('click_ads', $_COOKIE['PHPSESSID'], time() + (1440 * 24), "/");
 }
-require_once ROOT . "plugins/map-select/fun.php";
+// require_once ROOT . "plugins/map-select/fun.php";
 
 $Extra['form_search'] = _tpl_fill(ROOT_THEME_ROUTES . 'empresas/tpl/search.tpl', [], '', false);
 $Extra['links'] = _tpl_fill(ROOT_THEME_ROUTES . 'empresas/tpl/links.tpl', $Extra, '', false);
-$Extra['mapa_svg'] = _plug_map_select(true);
+// $Extra['mapa_svg'] = _plug_map_select(true);
 
 if (isset(URL()[1])) {
     $Term = str_replace("-", " ", URL()[1]);

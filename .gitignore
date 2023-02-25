@@ -1,6 +1,6 @@
 ### Framework Liloo ###
 
-_Kernel/Libs/*
+_Kernel/Libs/
 uploads/*
 themes/kitreact/
 
@@ -10,6 +10,7 @@ themes/kitreact/
 .gitignore
 .git/
 libs/@materialize/
+libs/@mui/
 
 
 ### Importantes ###

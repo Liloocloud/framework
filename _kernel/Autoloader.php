@@ -1,16 +1,18 @@
 <?php
 /**
  * Carregamento automatico das class do sistema pela Namespace
- * @copyright Felipe Oliveira Lourenço - 11.01.2021
- * @version 2.1.2
+ * @copyright 11.01.2021 - Felipe Oliveira Lourenço
+ * @update 25.02.2023
+ * @version 2.2.2
  */
 
 function __autoLoadClass($Class){   
-    $Module    = ROOT.'_Modules/';
-    $Plugin    = ROOT.'_Plugins/';
-    $Front     = ROOT_KERNEL.'Class/';
-    $Kernel    = ROOT_KERNEL.'App/';
-    $Libs      = ROOT_KERNEL.'Libs/';
+    $Module     = ROOT.'_Modules/';
+    $Plugin     = ROOT.'_Plugins/';
+    $Front      = ROOT_KERNEL.'Class/';
+    $Kernel     = ROOT_KERNEL.'App/';
+    $Libs       = ROOT_KERNEL.'Libs/';
+    $Components = ROOT_KERNEL.'Src/';
 
     $PATH      = [
         'Module' => 'modules/'
@@ -85,6 +87,15 @@ function __autoLoadClass($Class){
             }else{
                 _MESSAGE("Não foi possível carregar a classe '{$Class}' pela 'Frontend");
             }
+        }
+
+    // Verifica se o Termo Components se encontra no namespace
+    }elseif(in_array('Components', $Namespace)){
+        $This = $Components.strtolower($Namespace[0]).'/'.strtolower($Namespace[1]).'/';
+        if(isset($Namespace) && file_exists($This.$Namespace[1].'.php')){     
+            require_once $This.$Namespace[1].'.php';
+        }else{
+            _MESSAGE("Não foi possível carregar a classe '{$Class}' pela 'Components");
         }
 
     // Verifica se o namespace se encontra na Kernel
