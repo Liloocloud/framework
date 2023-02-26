@@ -6,7 +6,7 @@
  * @version 2.0
  */
 require_once "../../../_Kernel/___Kernel.php";
-require_once "../accounts.config.php";<!--[if IE]><![endif]-->
+require_once "../accounts.config.php";
 require_once "../../../_Kernel/_Sync.inout.php";
 
 switch ($Action){
