@@ -25,7 +25,6 @@ new \Components\Accordion([
     echo '<div class="uk-container">';    
     echo $res;
     echo '</div>';
-
 });
 
 // $Accordion->render();
