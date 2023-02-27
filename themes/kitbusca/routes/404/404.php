@@ -7,12 +7,12 @@
 // declare (strict_types = 1);
 
 new \Components\Accordion([
-    'template' => ROOT_COMPONENTS . 'accordion/uikit.tpl',
-    'content' => [
-        ['title' => 'Primeiro', 'text' => 'lorem impsum'],
-        ['title' => 'Segundo', 'text' => 'lorem impsum'],
-        ['title' => 'terceiro', 'text' => 'lorem impsum'],
-    ],
+    // 'content' => [
+    //     ['title' => 'Primeiro', 'text' => 'lorem impsum'],
+    //     ['title' => 'Segundo', 'text' => 'lorem impsum'],
+    //     ['title' => 'terceiro', 'text' => 'lorem impsum'],
+    // ],
+
     'sql' => [
         'table' => TB_SHOP_PRODUCTS,
         'where' => ['prod_account_id' => 16],
@@ -21,8 +21,10 @@ new \Components\Accordion([
             'text' => 'prod_description',
         ],
     ],
+
 ], function ($res) {
-    echo '<div class="uk-container">';    
+    echo '<div class="uk-container uk-padding-large">';    
+    echo '<h2>Estou usando o template</h2>';
     echo $res;
     echo '</div>';
 });
