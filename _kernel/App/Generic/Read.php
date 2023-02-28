@@ -25,12 +25,12 @@ class Read
     }
 
     /**
-     * Busca registro pela sintaxe passada pelo parametro
-     * Ideal para montar classes de abstração de terceiros
+     * Busca registro pela sintaxe passada pelo parametro. Ideal para montar classes de abstração de terceiros
      *
-     * @param Array $sintaxe - Array com os Valores de Join. Ex.: ['tb1'=>'campo', 'tb2'=> 'campo']
-     * @param Int Número de resultados por página
-     * @return array
+     * @param String $inner_join - Parte da sintaxe WHERE que contem o Inner Join
+     * @param Int|null $limit - Limite de resultados da paginação
+     * @param String $statement - Statement caso possua
+     * @return Array
      */
     public function join(string $inner_join, int $limit = null, string $statement = '')
     {        
