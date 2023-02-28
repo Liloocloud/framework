@@ -1,8 +1,8 @@
-<div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: slide">
+<div class="uk-child-width-1-{{ column }}@m" uk-grid uk-lightbox="animation: {{ animation }}">
     {% for item in data %}
     <div>
-        <a class="uk-inline" href="images/photo.jpg" data-caption="Caption 1">
-            <img src="images/photo.jpg" width="1800" height="1200" alt="">
+        <a class="uk-inline" href="{{ item.thumbnail }}" data-caption="{{ item.description }}">
+            <img src="{{ item.img }}" width="{{ item.width }}" height="{{ item.height }}" alt="{{ item.alt }}">
         </a>
     </div>
     {% endfor %}

@@ -28,7 +28,7 @@ class Lightbox
      * @param Fun $fun - Recebe uma função com callback para retornar o template
      */
     public function __construct($options, $fun)
-    {
+    {    
         $this->cache = (isset($options['cache'])) ? $options['cache'] : false;
         $this->options = $options;
         if (isset($options['tpl'])) {

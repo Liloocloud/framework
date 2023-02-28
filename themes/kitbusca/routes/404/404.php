@@ -4,11 +4,42 @@
  * @copyright Felipe Oliveira Lourenço - 02.07.2020
  */
 
+$Products = 
+$Thumbs = 
+
+
+
+$tpl = new Components\Components('accordion', [
+    'animation' => 'slide', // slide, fade, scale
+    'column' => 3,
+    'cache' => false,
+    'width' => '',
+    'height' => '',
+    'data' => _get_data_full("
+        SELECT * FROM `" . TB_SHOP_PRODUCTS . "`
+        INNER JOIN `" . TB_UPLOADS . "`
+        ON " . TB_SHOP_PRODUCTS . ".prod_id = " . TB_UPLOADS . ".upload_ref_id;
+    "),
+    'sync' => [
+        'thumbnail' => 'campo_1',
+        'description' => 'prod_description',
+        'img' => '',
+        'alt' => ''
+    ]
+], function ($res) {
+    echo '<div class="uk-container uk-padding">';
+    echo $res;
+    echo '</div>';
+});
+$tpl->output();
+
+
 // declare (strict_types = 1);
 
 // $Products = _get_data_full("
 //     SELECT * FROM `" . TB_SHOP_PRODUCTS . "`
-//
+//     INNER JOIN `" . TB_UPLOADS . "`
+//     ON " . TB_SHOP_PRODUCTS . ".prod_id = " . TB_UPLOADS . ".upload_ref_id;
 // ");
 
 // foreach ($Products as $key => $value) {
@@ -21,18 +52,7 @@
 
 // }
 
-// new Components\Lightbox([
-//     'sql' => [
-//         'table' => TB_SHOP_PRODUCTS,
-//         'where' => ['prod_account_id' => 16],
-//         'fields' => [
-//             'title' => 'prod_title',
-//             'text' => 'prod_description',
-//         ],
-//     ],
-// ], function ($res) {
-//     echo $res;
-// });
+
 
 // $Accordion->render();
 

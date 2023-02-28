@@ -92,8 +92,11 @@ function __autoLoadClass($Class){
     // Verifica se o Termo Components se encontra no namespace
     }elseif(in_array('Components', $Namespace)){
         $This = $Components.strtolower($Namespace[0]).'/'.strtolower($Namespace[1]).'/';
+        $Cls = $Components.strtolower($Namespace[0]).'/';
         if(isset($Namespace) && file_exists($This.$Namespace[1].'.php')){     
             require_once $This.$Namespace[1].'.php';
+        }elseif(isset($Cls) && file_exists($Cls.$Namespace[1].'.php')){
+            require_once $Cls.$Namespace[1].'.php';
         }else{
             _MESSAGE("Não foi possível carregar a classe '{$Class}' pela 'Components");
         }
