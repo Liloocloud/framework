@@ -4,25 +4,11 @@
  * @copyright Felipe Oliveira Lourenço - 02.07.2020
  */
 
-
-$Test = new \Generic\Read(TB_SHOP_PRODUCTS);
-var_dump(
-    $Test->join(
-        "INNER JOIN `" . TB_UPLOADS . "`
-        ON " . TB_SHOP_PRODUCTS . ".prod_id = " . TB_UPLOADS . ".upload_ref_id
-        WHERE ".TB_SHOP_PRODUCTS.".prod_account_id =:a
-        ", 
-        10, 
-        "a=16"
-    )
-);
-
-
 // declare (strict_types = 1);
 
 // $Products = _get_data_full("
 //     SELECT * FROM `" . TB_SHOP_PRODUCTS . "`
-//     
+//
 // ");
 
 // foreach ($Products as $key => $value) {
