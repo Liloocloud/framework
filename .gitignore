@@ -1,7 +1,7 @@
 ### Framework Liloo ###
 
 _Kernel/Libs/
-uploads/*
+uploads/
 themes/kitreact/
 
 # !_kernel/__Kernel.php

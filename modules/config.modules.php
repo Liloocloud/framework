@@ -24,7 +24,7 @@ $active_modules = [
 	'locations', // Gestão de localidades + API
 	
 	// 'clients', // Nativo
-	// 'uploads', // Nativo - Gerencidos de arquivos da plataforma
+	'uploads', // Nativo - Gerencidos de arquivos da plataforma
 	// 'dash', // Nativo
 	
 	/**************************************************

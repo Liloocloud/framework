@@ -4,25 +4,38 @@
  * @copyright Felipe Oliveira Lourenço - 02.07.2020
  */
 
+use Explore\Modules;
+
 // declare (strict_types = 1);
 
-new \Components\Accordion([
-    'sql' => [
-        'table' => TB_SHOP_PRODUCTS,
-        'where' => ['prod_account_id' => 16],
-        'fields' => [
-            'title' => 'prod_title',
-            'text' => 'prod_description',
-        ],
-    ]
-], function ($res) {
-    echo '<div class="uk-container uk-padding-large">';    
-    echo '<h2>Estou usando o template</h2>';
-    echo $res;
-    echo '</div>';
-});
+$Products = _get_data_full("
+    SELECT * FROM `" . TB_SHOP_PRODUCTS . "`
+    INNER JOIN `" . TB_UPLOADS . "`
+    ON " . TB_SHOP_PRODUCTS . ".prod_id = " . TB_UPLOADS . ".upload_ref_id;
+");
 
+foreach ($Products as $key => $value) {
 
+    var_dump(
+        json_decode($value['upload_thumbnails'], true)[0]['image']
+
+    );
+    echo '<img src="'.BASE.$value['upload_url'] . json_decode($value['upload_thumbnails'], true)[0]['image'].'">';
+
+}
+
+// new Components\Lightbox([
+//     'sql' => [
+//         'table' => TB_SHOP_PRODUCTS,
+//         'where' => ['prod_account_id' => 16],
+//         'fields' => [
+//             'title' => 'prod_title',
+//             'text' => 'prod_description',
+//         ],
+//     ],
+// ], function ($res) {
+//     echo $res;
+// });
 
 // $Accordion->render();
 
@@ -60,20 +73,20 @@ new \Components\Accordion([
 // exit;
 
 $Extra['form_search'] = _tpl_fill(ROOT_THEME_ROUTES . '404/search.tpl', [], '', false);
-
-/**
- * LISTAGEM DOS GROUPS
- */
-// $GroupsCategories = _get_data_full("
-//     SELECT `group_services_id`,`group_title`
-//     FROM `".TB_SMART_SERVICES_GROUP."`
-//     ORDER BY group_title ASC ");
-// $View = '';
-// foreach ($GroupsCategories as $item) {
-//     $View.= "<option value='{$item['group_services_id']}'>{$item['group_title']}</option>";
-// }
-
-// $Extra['list_groups'] = $View;
-// $Extra['uploads'] = BASE_UPLOADS;
-
 _tpl_fill(ROOT_THEME_ROUTES . '404/404.tpl', $Extra, '');
+
+// new \Components\Accordion([
+//     'sql' => [
+//         'table' => TB_SHOP_PRODUCTS,
+//         'where' => ['prod_account_id' => 16],
+//         'fields' => [
+//             'title' => 'prod_title',
+//             'text' => 'prod_description',
+//         ],
+//     ]
+// ], function ($res) {
+//     echo '<div class="uk-container uk-padding-large">';
+//     echo '<h2>Estou usando o template</h2>';
+//     echo $res;
+//     echo '</div>';
+// });
