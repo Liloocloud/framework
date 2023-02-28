@@ -1,9 +1,9 @@
 <ul uk-accordion>
     {% for item in data %}
         <li>
-            <a class="uk-accordion-title" href="#">{{ item.prod_title }}</a>
+            <a class="uk-accordion-title" href="#">{{ item.title }}</a>
             <div class="uk-accordion-content">
-                <p>{{ item.prod_description }}</p>
+                <p>{{ item.text }}</p>
             </div>
         </li>
     {% endfor %}
