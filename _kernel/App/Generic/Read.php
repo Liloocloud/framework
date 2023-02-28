@@ -25,6 +25,36 @@ class Read
     }
 
     /**
+     * Busca registro pela sintaxe passada pelo parametro
+     * Ideal para montar classes de abstração de terceiros
+     *
+     * @param Array $sintaxe - Array com os Valores de Join. Ex.: ['tb1'=>'campo', 'tb2'=> 'campo']
+     * @param Int Número de resultados por página
+     * @return array
+     */
+    public function join(string $inner_join, int $limit = null, string $statement = '')
+    {        
+        $limit = ($limit == null) ? $this->limit : $limit;
+        $Stx = new Pagination(
+            $this->table, '*', $inner_join, $this->limit, null, $statement
+        );
+        if ($Stx->Results()['bool']) {
+            $this->navegation = $Stx->Nav();
+            return [
+                'bool' => true,
+                'message' => 'Resultados encontrados',
+                'output' => $Stx->Results()['output'],
+            ];
+        }
+        $this->navegation = '';
+        return [
+            'bool' => false,
+            'message' => 'Nenhum resultado encontrado',
+            'output' => null,
+        ];
+    }
+
+    /**
      * Retorna os valores pelo array de condição "where"
      * @param Array Monta o array como condição where
      * @param Int Número de resultados por página
@@ -34,7 +64,7 @@ class Read
         $limit = ($limit == null) ? $this->limit : $limit;
         $w = $this->mountWhere($array)['w'];
         $s = $this->mountWhere($array)['s'];
-        $List = new Pagination($this->table, '*', $w, $limit, null, $s);      
+        $List = new Pagination($this->table, '*', $w, $limit, null, $s);
         if ($List->Results()['bool']) {
             $this->navegation = $List->Nav();
             return [
@@ -193,15 +223,15 @@ class Read
      * @param Array Array com os campos que deseja verificar
      */
     public function completeData(array $array)
-    {  
-        $selects = (isset($array['fields']))? '`'.implode('`,`', $array['fields']).'`': "*";
+    {
+        $selects = (isset($array['fields'])) ? '`' . implode('`,`', $array['fields']) . '`' : "*";
         $w = $this->mountWhere($array['where'])['w'];
         $s = $this->mountWhere($array['where'])['s'];
-        $check = _get_data_full("SELECT {$selects} FROM `{$this->table}` {$w}","{$s}");
-        $check = (isset($check[0]))? $check[0]: false;
-        if($check){
+        $check = _get_data_full("SELECT {$selects} FROM `{$this->table}` {$w}", "{$s}");
+        $check = (isset($check[0])) ? $check[0] : false;
+        if ($check) {
             foreach ($check as $key => $val) {
-                if($val == null || $val == ''){
+                if ($val == null || $val == '') {
                     return [
                         'bool' => false,
                         'message' => 'Algum campo obrigatório está vazio',
@@ -209,11 +239,11 @@ class Read
                     ];
                 }
             }
-           return [
-            'bool' => true,
-            'message' => 'Dados completos',
-            'output' => $check,
-           ];
+            return [
+                'bool' => true,
+                'message' => 'Dados completos',
+                'output' => $check,
+            ];
         }
     }
 
@@ -222,7 +252,7 @@ class Read
      */
     public function Pagination()
     {
-        if($this->navegation){
+        if ($this->navegation) {
             return [
                 'bool' => true,
                 'message' => 'Paginação HTML',
@@ -235,7 +265,6 @@ class Read
             'output' => null,
         ];
     }
-
 
     /**
      * Verifica se o linha para atualizar existe. ideal para casos onde os dados são mais sensíveis
@@ -259,13 +288,10 @@ class Read
         ];
     }
 
-    /******************************************
-    /*********** PRIVATE METODES **************
-    /******************************************
-
     /**
      * Monta o clausula Where para uso global
      * retornando "where" e "statement"
+     * @param Array $array - Array com os valores
      */
     private function mountWhere($array)
     {
