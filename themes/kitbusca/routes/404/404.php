@@ -4,10 +4,12 @@
  * @copyright Felipe Oliveira Lourenço - 02.07.2020
  */
 
-$Products = 
-$Thumbs = 
-
-
+$Data = _get_data_full("
+SELECT * FROM `" . TB_SHOP_PRODUCTS . "`
+INNER JOIN `" . TB_UPLOADS . "`
+ON " . TB_SHOP_PRODUCTS . ".prod_id = " . TB_UPLOADS . ".upload_ref_id;
+");
+var_dump($Data);
 
 $tpl = new Components\Components('accordion', [
     'animation' => 'slide', // slide, fade, scale
@@ -15,11 +17,7 @@ $tpl = new Components\Components('accordion', [
     'cache' => false,
     'width' => '',
     'height' => '',
-    'data' => _get_data_full("
-        SELECT * FROM `" . TB_SHOP_PRODUCTS . "`
-        INNER JOIN `" . TB_UPLOADS . "`
-        ON " . TB_SHOP_PRODUCTS . ".prod_id = " . TB_UPLOADS . ".upload_ref_id;
-    "),
+    'data' => $Data,
     'sync' => [
         'thumbnail' => 'campo_1',
         'description' => 'prod_description',
