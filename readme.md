@@ -1,4 +1,5 @@
 # Framework PHP Liloo
+Desenvolvindo em PHP + Ajax para melhor desempenho
 
 ## Composer 
 - Regra composer.json opcional
