@@ -1,9 +1,10 @@
 {
-    "name": "framework/liloo",
+    "name": "liloo/framework-php",
     "description": "Framework PHP Liloo",
     "require": {
         "phpmailer/phpmailer": "^6.7",
-        "twig/twig": "^3.5"
+        "twig/twig": "^3.5",
+        "monolog/monolog": "^2.9"
     },
     "config": {
         "vendor-dir": "_Kernel/Libs/"
