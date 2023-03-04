@@ -17,6 +17,7 @@ libs/@mui/
 composer.lock
 .vscode
 php.ini
+info.md
 # *.txt
 *.xlsx
 *.doc
