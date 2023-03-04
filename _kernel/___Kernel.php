@@ -238,6 +238,11 @@ define('TB_LOCATIONS_STATES', 'location_states');
 define('TB_LOCATIONS_COUNTRIES', 'location_countries');
 
 /*******************************************************************
+ * AUTOLOADER COMPOSER
+ */
+require_once ROOT."_Kernel/Libs/autoload.php";
+
+/*******************************************************************
  * AUTO CARREGAMENTO DAS CLASSES
  */
 require_once ROOT_KERNEL . "Helpers.inout.php";
@@ -253,7 +258,7 @@ if (!isset($_SESSION) && empty($_SESSION)) {
 require_once ROOT_KERNEL . "DBSA.inout.php";
 require_once ROOT_KERNEL . 'Globals.inout.php';
 // require_once ROOT_KERNEL."Ciclo.inout.php";
-require_once ROOT."_Kernel/Libs/autoload.php";
+
 
 /*******************************************************************
  * INICIA FUNÇÕES GLOBAIS QUE NÃO USAM CLASSES, PARA EVITAR CONFLITOS

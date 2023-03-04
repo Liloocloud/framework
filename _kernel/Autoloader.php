@@ -113,8 +113,8 @@ function __autoLoadClass($Class){
             throw new Exception("Erro no Módulo", 2);
         }
 
-
     }
+
 
 }
 spl_autoload_register('__autoLoadClass');
