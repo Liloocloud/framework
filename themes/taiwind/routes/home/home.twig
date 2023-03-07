@@ -1,0 +1,20 @@
+<section class="container mx-auto p-10">
+
+ 	<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4 text-white">
+
+		{% for user in accounts %}
+
+			<div class="bg-cyan-500 bg-gradient-to-r from-indigo-600 to-pink-500 p-5 rounded-md shadow-lg">
+				<h2 class="text-xl mb-4 text-white">{{ user.account_name }} {{ user.account_lastname }}</h2>
+				<p class="text-lg">{{ user.account_email }}</p>
+				<p class="text-lg">{{ user.account_phone }}</p>
+				<button class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-md mt-4">Saiba mais</button>
+			</div>
+
+		{% endfor %}
+
+	</div>
+		
+	{{ pagination | raw }}
+
+</section>

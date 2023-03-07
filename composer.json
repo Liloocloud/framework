@@ -5,7 +5,7 @@
         "phpmailer/phpmailer": "^6.7",
         "twig/twig": "^3.5",
         "monolog/monolog": "^2.9",
-        "liloo/helpers": "^1.0"
+        "liloo/libraries": "^1.2"
     },
     "config": {
         "vendor-dir": "_Kernel/Libs/"

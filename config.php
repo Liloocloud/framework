@@ -70,7 +70,9 @@ $__CONF__ = [
     /**
      * Temas
      */
-    'theme' => 'kitbusca',
+    'theme' => 'taiwind',
+
+
     'base' => $base,
     'theme_routes' => 'routes/',
     'theme_images' => 'assets/img/',
