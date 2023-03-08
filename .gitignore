@@ -4,9 +4,7 @@
 cache/
 /themes/kitreact/
 /uploads/
-
-
-# !_kernel/__Kernel.php
+/_kernel/__Kernel.php
 
 ### Git
 .gitignore
