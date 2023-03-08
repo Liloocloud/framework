@@ -1,9 +1,9 @@
 ### Framework Liloo ###
-__old/
-_Kernel/Libs/
+/__old/
+/_Kernel/Libs/
 cache/
-themes/kitreact/
-uploads/
+/themes/kitreact/
+/uploads/
 
 
 # !_kernel/__Kernel.php

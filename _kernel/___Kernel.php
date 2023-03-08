@@ -41,10 +41,10 @@ if (strpos($PROJECT, 'localhost') !== false) {
     define("DB_PASS", '');
     define("DB_DBSA", 'liloo.kitbusca');
 } else {
-    define("DB_HOST", 'localhost');
-    define("DB_USER", 'kitbuscauserftp_userdatabase');
-    define("DB_PASS", '7L!y^8T#aNT1Ue@Sd(][JOFGC(PvW8(]bTvm');
-    define("DB_DBSA", 'kitbuscauserftp_database_init_21_12_2022');
+    define("DB_HOST", '');
+    define("DB_USER", '');
+    define("DB_PASS", '');
+    define("DB_DBSA", '');
 }
 // }
 
