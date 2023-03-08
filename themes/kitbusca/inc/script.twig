@@ -1,0 +1,18 @@
+<div class="callback"></div>
+<script type="text/javascript" src="{{ BASE_ASSETS }}maskinput/jquery.mask.min.js"></script>
+<script type="text/javascript" src="{{ BASE_ASSETS }}maskinput/maskinput.js"></script>
+<script type="text/javascript" src="{{ BASE_ASSETS }}liloo/js/lilooJS-2.0.js"></script>
+<script type="text/javascript" src="{{ BASE_ASSETS }}liloo/js/lilooJS-3.0.js"></script>
+
+<!-- CARREGAMENTO DOS SCRIPTS DE CADA ROTA DA FRONTEND -->
+{% if theme_script %}
+	<script type="text/javascript" src="{{ BASE_THEME_ROUTES }}{{ URL }}/script.js"></script>
+	<script type="module" src="{{ BASE_THEME_ROUTES }}{{ URL }}/module.js"></script>
+{% else %}
+	<script type="text/javascript" src="{{ BASE_THEME_ROUTES }}home/script.js"></script>
+	<script type="module" src="{{ BASE_THEME_ROUTES }}home/module.js"></script>
+{% endif %}
+
+<script type="text/javascript">
+	$('[liloo-loader]').hide()
+</script></body></html>

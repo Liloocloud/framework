@@ -258,6 +258,8 @@ if (!isset($_SESSION) && empty($_SESSION)) {
 require_once ROOT_KERNEL . "DBSA.inout.php";
 require_once ROOT_KERNEL . 'Globals.inout.php';
 // require_once ROOT_KERNEL."Ciclo.inout.php";
+require_once ROOT_THEME."__config.theme.php";
+require_once ROOT_THEME."__fun.theme.php";
 
 
 /*******************************************************************
@@ -284,3 +286,17 @@ function URL()
     }
     return array_filter($URL);
 }
+
+/**
+ * Montagem de Global extra
+ */
+(isset(URL()[0])) ? $URL = URL()[0] : $URL = 'home';
+$Extra['config'] = [];
+foreach (_get_data_table(TB_OPTIONS) as $Docty) {
+    $Extra['config'][$Docty['opt_meta']] = $Docty['opt_values'];
+}
+$Extra['theme_script'] = file_exists(ROOT_THEME_ROUTES . $URL . '/script.js');
+$Extra['theme_css'] = file_exists(ROOT_THEME_ROUTES . $URL . '/style.css');
+$Extra['theme_module'] = file_exists(ROOT_THEME_ROUTES . $URL . '/module.js');
+$Extra['URL'] = $URL;
+$Extra['session'] = $_SESSION;

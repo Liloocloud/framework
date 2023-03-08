@@ -70,7 +70,8 @@ $__CONF__ = [
     /**
      * Temas
      */
-    'theme' => 'taiwind',
+    'theme' => 'kitbusca',
+    // 'theme' => 'taiwind',
 
 
     'base' => $base,

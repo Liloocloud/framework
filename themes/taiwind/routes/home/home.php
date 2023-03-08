@@ -1,11 +1,11 @@
 <?php
+use Liloo\Generic\Read;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
-use Liloo\Generic\Read;
 
-$ThisRoute = new FilesystemLoader(ROOT_THEME_ROUTES.'home/');
+$ThisRoute = new FilesystemLoader(ROOT_THEME_ROUTES . 'home/');
 $ThieTwig = new Environment($ThisRoute, [
-	// 'cache' => ROOT . 'cache/'
+    // 'cache' => ROOT . 'cache/'
 ]);
 
 $Ads = new Read(TB_ACCOUNTS);
