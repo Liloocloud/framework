@@ -1,17 +1,17 @@
 ### Framework Liloo ###
-/__old/
-/_Kernel/Libs/
+__old/
+_Kernel/Libs/
+_Kernel/___Kernel.php
 cache/
-/themes/kitreact/
-/uploads/
-/_kernel/__Kernel.php
+themes/kitreact/
+uploads/
 
 ### Git
 .gitignore
 .git/
 libs/@materialize/
 libs/@mui/
-
+.env
 
 ### Importantes ###
 composer.lock

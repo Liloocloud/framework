@@ -29,25 +29,6 @@ if ($__CONF__['xdebug'] === true) {
 // Configura a data e hora do sistema
 date_default_timezone_set($__CONF__['time_zone']);
 
-/****************************************************************
- * Conexão com Banco de Dados
- */
-// Banco de dados espefícido no modulo
-// if(!defined('DB_HOST') && !defined('DB_USER') && !defined('DB_PASS') && !defined('DB_DBSA')){
-$PROJECT = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-if (strpos($PROJECT, 'localhost') !== false) {
-    define("DB_HOST", 'localhost');
-    define("DB_USER", 'root');
-    define("DB_PASS", '');
-    define("DB_DBSA", 'liloo.kitbusca');
-} else {
-    define("DB_HOST", '');
-    define("DB_USER", '');
-    define("DB_PASS", '');
-    define("DB_DBSA", '');
-}
-// }
-
 /*****************************************************************
  * PADRÕES NATIVOS - EXTRAS
  */
@@ -260,6 +241,28 @@ require_once ROOT_KERNEL . 'Globals.inout.php';
 // require_once ROOT_KERNEL."Ciclo.inout.php";
 require_once ROOT_THEME."__config.theme.php";
 require_once ROOT_THEME."__fun.theme.php";
+
+
+/****************************************************************
+ * Conexão com Banco de Dados local e remoto alterado apenas
+ * pela palavra "localhost" na URL
+ */
+use Helpers\DotEnv;
+DotEnv::load();
+
+$PROJECT = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+if (strpos($PROJECT, 'localhost') !== false) {
+    define("DB_HOST", getenv('DB_HOST_DEV'));
+    define("DB_USER", getenv('DB_USER_DEV'));
+    define("DB_PASS", getenv('DB_PASS_DEV'));
+    define("DB_DBSA", getenv('DB_DBSA_DEV'));
+} else {
+    define("DB_HOST", getenv('DB_HOST'));
+    define("DB_USER", getenv('DB_USER'));
+    define("DB_PASS", getenv('DB_PASS'));
+    define("DB_DBSA", getenv('DB_DBSA'));
+}
+
 
 
 /*******************************************************************
