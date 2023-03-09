@@ -1,13 +1,11 @@
 <!-- ####################### Off-Canvas -->
 <div id="liloo-menu-top-offcanvas" class="offcanvas-overlay-left" uk-offcanvas="flip: true;">
     <div class="uk-offcanvas-bar">
+        <img class="logo" src="{{ BASE_UPLOADS }}root/logotipo-principal.svg" alt="">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav-default" uk-nav>
-            <li class="uk-nav-header">
-                <img class="logo" src="{{ BASE_UPLOADS }}root/logotipo-mono-escuro.png" alt="">
-            </li>
 
-            <li class="uk-parent">
+            {# <li class="uk-parent">
                 <a href="#" aria-expanded="true">Alimentação</a>
                 <ul class="uk-nav-sub">
                     <li><a href="#"><i class="fas fa-burger-soda"></i> Lanchonetes</a></li>
@@ -21,9 +19,9 @@
                     <li><a href="#"><i class="fas fa-shopping-basket"></i> Supermercados</a></li>
                     <li><a href="#"><i class="fas fa-apple-crate"></i> Mercearias</a></li>
                 </ul> 
-            </li>
+            </li> #}
 
-            <li class="uk-parent">
+            {# <li class="uk-parent">
                 <a href="#" aria-expanded="true">Agências</a>
                 <ul class="uk-nav-sub">
                     <li><a href="{{ BASE }}empresas/marketing-digital/"><i class="fas fa-car-mechanic"></i> Marketing Digital</a></li>
@@ -36,9 +34,9 @@
                     <li><a href="{{ BASE }}empresas/talentos/"><i class="fas fa-key"></i> Talentos</a></li>
                     <li><a href="{{ BASE }}empresas/seguros/"><i class="fas fa-swatchbook"></i> Seguros</a></li>
                 </ul>
-            </li>
+            </li> #}
 
-            <li class="uk-parent">
+            {# <li class="uk-parent">
                 <a href="#" aria-expanded="true">Serviços Automotivos</a>
                 <ul class="uk-nav-sub">
                     <li><a href="#"><i class="fas fa-car-mechanic"></i> Oficina Mecânica</a></li>
@@ -51,9 +49,9 @@
                     <li><a href="#"><i class="fas fa-key"></i> Concessionárias</a></li>
                     <li><a href="#"><i class="fas fa-swatchbook"></i> Funilaria</a></li>
                 </ul> 
-            </li>
+            </li> #}
 
-            <li class="uk-parent">
+            {# <li class="uk-parent">
                 <a href="#" aria-expanded="true">Mais</a>
                 <ul class="uk-nav-sub">
                     <li><a href="{{ BASE }}empresas/imobiliarias/"><i class="fas fa-burger-soda"></i> Imobiliárias</a></li>
@@ -67,9 +65,16 @@
                     <li><a href="{{ BASE }}empresas/hoteis-e-viagem"><i class="fas fa-shopping-basket"></i> Hotéis & Viagem</a></li>
                     <li><a href="{{ BASE }}empresas/educacao/"><i class="fas fa-apple-crate"></i> Educação</a></li>
                 </ul>
+            </li> #}
+
+            <li class="uk-parent">
+                {% for item in menu_top %}
+                    <a href="{{ item.0 }}" {{ item.2 }}>{{ item.3 }}</a>
+                {% endfor %}
             </li>
 
-            <?php frontend_builder_menu(json_encode(MENU_TOP))?>
+            
+            
         </ul>
     </div>
 </div>
@@ -78,14 +83,14 @@
 <div id="liloo-menu-top-desktop" class="uk-box-shadow-small uk-visible@m" style="background-color: #f8f8f8;" uk-sticky>
     <nav class="uk-navbar-container" uk-navbar="mode: click" style="z-index:999;">
         <a class="uk-navbar-item uk-logo" href="{{ BASE }}">
-            <img class="logo" src="{{ BASE_UPLOADS }}root/logotipo.png" alt="Serviços de Limpeza Residencial e Comercial em Santos e Região" width="100px">
+            <img class="logo" src="{{ BASE_UPLOADS }}root/logotipo-principal.svg" alt="Serviços de Limpeza Residencial e Comercial em Santos e Região" width="100px">
         </a>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <div class="uk-navbar-item">
                     
                     <!-- Alimentação -->
-                    <a href="#" class="uk-button uk-button-link">Alimentação <i uk-icon="icon: triangle-down"></i></a>
+                    {# <a href="#" class="uk-button uk-button-link">Alimentação <i uk-icon="icon: triangle-down"></i></a>
                     <div class="uk-width-large" uk-dropdown>
                         <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
                             <div>
@@ -107,10 +112,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> #}
 
                     <!-- Agencias -->
-                    <a href="#" class="uk-button uk-button-link">Agências <i uk-icon="icon: triangle-down"></i></a>
+                    {# <a href="#" class="uk-button uk-button-link">Agências <i uk-icon="icon: triangle-down"></i></a>
                     <div class="uk-width-large" uk-dropdown>
                         <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
                             <div>
@@ -131,10 +136,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> #}
 
                     <!-- Serviços Automotivos -->
-                    <a href="#" class="uk-button uk-button-link">Serviços Automotivos <i uk-icon="icon: triangle-down"></i></a>
+                    {# <a href="#" class="uk-button uk-button-link">Serviços Automotivos <i uk-icon="icon: triangle-down"></i></a>
                     <div class="uk-width-large" uk-dropdown>
                         <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
                             <div>
@@ -155,10 +160,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> #}
 
                     <!-- Mais -->
-                    <a href="#" class="uk-button uk-button-link">Mais <i uk-icon="icon: triangle-down"></i></a>
+                    {# <a href="#" class="uk-button uk-button-link">Mais <i uk-icon="icon: triangle-down"></i></a>
                     <div class="uk-width-large" uk-dropdown>
                         <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
                             <div>
@@ -181,7 +186,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> #}
 
                 </div>
             </ul>
@@ -189,14 +194,11 @@
         <div class="uk-navbar-right">
             <div class="uk-visible@m">
                 <ul class="uk-navbar-nav">
-                    <div class="uk-navbar-item">
-                        <a href="{{ BASE }}seja-um-profissional/" class="uk-button uk-button-link">Para empresas</a>
-                        {% if session.account_id %}
-                            <a href="{{ BASE_ADMIN }}" class="uk-button uk-button-default" target="_blank">Acessar</a>
-                            <a href="{{ BASE }}conta/cadastre-se/" class="uk-button uk-button-secondary">Cadastre-se</a>           
-                        {% else %}
-                            <a href="{{ BASE_ADMIN }}" class="uk-button uk-button-default" target="_blank">Voltar ao Painel</a>
-                        {% endif %}
+                    
+                    <div class="uk-navbar-item">         
+                        {% for item in menu_top %}
+                            <a href="{{ item.0 }}" class="uk-button {{ item.1 }}" {{ item.2 }}>{{ item.3 }}</a>
+                        {% endfor %}
                     </div>
 
                 </ul>
@@ -213,7 +215,7 @@
     <nav class="uk-navbar-container" uk-navbar="mode: click">
         <div class="uk-navbar-left">
             <a class="uk-navbar-item uk-logo" href="{{ BASE }}">
-                <img class="logo" src="{{ BASE_UPLOADS }}root/logotipo.png" alt="">
+                <img class="logo" src="{{ BASE_UPLOADS }}root/logotipo-principal.svg" alt="" width="100%">
             </a>
         </div>
         <div class="uk-navbar-right">

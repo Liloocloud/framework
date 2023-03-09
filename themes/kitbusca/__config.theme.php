@@ -137,26 +137,6 @@ define('__THEME__', [
 	'whatsapp_pages_disabled' => [],	
 ]);
 
-/**
- * Menu do tema sendo a chave o HTML e o Value a URL
- */
-if(!isset($_SESSION['account_id'])):
-	define('MENU_TOP',[
-		'Como funciona?' => BASE.'como-funciona/',
-		'Cadastre-se' => BASE.'cadastre-se/',
-		'Entrar' => BASE_ADMIN.'login/'
-	]);
-else:
-	define('MENU_TOP',[
-		'Como funciona?' => BASE.'como-funciona/',
-		'Voltar ao Painel' => BASE.'meu-painel/'
-	]);
-endif;
-
-
-
-
-
 // /**
 //  * Recupera a localização do usuário 
 //  * Pelo TB Cookie ou Geo IP

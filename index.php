@@ -18,7 +18,7 @@ $twig = new Environment($inc, [
 
 echo $twig->render('doctype.twig', $Extra);
 if (!pathinfoURLString(__THEME__['header_pages_disabled'])) {
-    echo $twig->render('header.twig', $Extra);
+    require_once ROOT_THEME . 'inc/header.php';
 }
 
 // Sistea de Leitura de Rotas
