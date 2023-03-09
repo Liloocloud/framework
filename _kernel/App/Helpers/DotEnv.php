@@ -15,7 +15,6 @@ class DotEnv
      */
     public static function load($dir = null)
     {
-        var_dump(self::$path);
         if(!file_exists(self::$path)){
             return false;
         }
