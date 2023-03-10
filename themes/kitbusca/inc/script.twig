@@ -15,4 +15,29 @@
 
 <script type="text/javascript">
 	$('[liloo-loader]').hide()
+
+	$('.liloo-whatsapp').on('click', function() {
+		$('#liloo-window-whatsapp').toggle()
+		$('.icon-whatsapp').toggle()
+		$('#icon-close').toggle()
+		$('[name="contact_whastapp"]').focus()
+		return false
+	})
+
+	$('.icon-whatsapp').on('click', function(){
+		lilooJS.Event({
+			action: 'click_btn_whatsapp',
+			path: 'themes/<?= $__CONF__['theme'] ?>/ajax/ContactSystem',
+			data: 'click'
+		})    
+	})
+
+	$('.liloo-click-phone').on('click', function(){
+		lilooJS.Event({
+			action: 'click_btn_phone',
+			path: 'themes/<?= $__CONF__['theme'] ?>/ajax/ContactSystem',
+			data: 'phone'
+		})    
+	})
+
 </script></body></html>

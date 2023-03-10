@@ -3,7 +3,6 @@
  * Controladora da página Home do tema Vamove
  * @copyright Felipe Oliveira Lourenço - 17-01-023
  */
-use Liloo\Generic\Read;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 

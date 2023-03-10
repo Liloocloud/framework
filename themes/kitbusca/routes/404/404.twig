@@ -1,5 +1,14 @@
-<ul id="navigation">
-{% for item in navigation %}
-    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-{% endfor %}
-</ul>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<div class="bg-gradient-to-r from-[#260656] to-[#4c1d95]">
+	<div class="grid justify-items-center text-center p-2 uk-light">
+
+		<lottie-player src="{{ BASE_UPLOADS }}animations/404.json" background="transparent" speed="1" style="width: 350px;" loop autoplay></lottie-player>
+
+		<h1 class="text-5xl">Ops! Parece que essa página não existe!</h1>
+		<p style="font-size: 22px" class="uk-margin-large-bottom">Clique em algum link ou faça uma nova busca</p>
+		<div class="min-w-[70%]">
+			{% include 'search.twig' %}
+		</div>
+
+	</div>
+</div>

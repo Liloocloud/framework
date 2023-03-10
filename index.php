@@ -53,7 +53,7 @@ if (isset(URL()[0]) && array_key_exists(URL()[0], __THEME__['embedded_system']))
 
 // Footer
 if (!pathinfoURLString(__THEME__['footer_pages_disabled'])) {
-    echo $twig->render('footer.twig', $Extra);
+    require_once ROOT_THEME . 'inc/footer.php';
 }
 if (!pathinfoURLString(__THEME__['copyright_pages_disabled'])) {
     echo $twig->render('copyright.twig', $Extra);
