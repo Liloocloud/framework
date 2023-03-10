@@ -1,10 +1,10 @@
-<div id="home-categories" class="uk-container uk-text-center uk-padding">
-	<h2>Categorias</h2>
+<div id="home-categories" class="uk-container p-20">
+	<h2 class="text-2xl text-primary py-10">Principais Categorias</h2>
 	<div class="uk-child-width-1-3 uk-child-width-1-4@m uk-child-width-1-5@l uk-grid-small" uk-grid>
 
 		{% for item in categories %}
 			<div>
-				<a href="#" class="uk-card uk-card-default uk-card-body uk-card-hover">
+				<a href="#" class="uk-card uk-card-default uk-card-body uk-card-hover grid grid-cols-1 gap-5 place-items-center rounded-lg">
 					<img src="{{ BASE_UPLOADS }}root/categories/icons/{{ item.img }}" loading="lazy" alt="{{ item.title }}" title="{{ item.title }}" width="60px">
 					<h2>{{ item.title }}</h2>
 				</a>

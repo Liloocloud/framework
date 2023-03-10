@@ -3,15 +3,20 @@
  * Controladora da página Home do tema Vamove
  * @copyright Felipe Oliveira Lourenço - 17-01-023
  */
+use Liloo\Generic\Read;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 if(!isset($_COOKIE['click_ads'])){
     @setcookie('click_ads', $_COOKIE['PHPSESSID'], time() + (1440 * 24), "/");
 }
-// require_once ROOT . "plugins/map-select/fun.php";
 
-$Extra['form_search'] = _tpl_fill(ROOT_THEME_ROUTES . 'empresas/tpl/search.tpl', [], '', false);
-$Extra['links'] = _tpl_fill(ROOT_THEME_ROUTES . 'empresas/tpl/links.tpl', $Extra, '', false);
-// $Extra['mapa_svg'] = _plug_map_select(true);
+$ThisRoute = new FilesystemLoader(ROOT_THEME_ROUTES . 'empresas/tpl/');
+$ThisRoute = new Environment($ThisRoute, [
+    // 'cache' => ROOT . 'cache/'
+]);
+echo $ThisRoute->render('search.twig', $Extra);
+
 
 if (isset(URL()[1])) {
     $Term = str_replace("-", " ", URL()[1]);
@@ -56,11 +61,15 @@ if (isset(URL()[1])) {
             }
 
             $Extra['listview_organic'] .= _tpl_fill(ROOT_THEME_ROUTES . 'empresas/tpl/organic.tpl', $Values, '', false);
+            // echo $ThisRoute->render('organic.twig', $Extra);
         }
+        
+        
         $Extra['paginator'] = $List->Nav();
     }
 } else {
     $Extra['listview_organic'] = 'Realize sua busca';
     $Extra['paginator'] = '';
 }
-_tpl_fill(ROOT_THEME_ROUTES . 'empresas/empresas.tpl', $Extra, '');
+
+echo $ThisRoute->render('empresas.tpl', $Extra);

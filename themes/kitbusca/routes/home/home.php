@@ -26,7 +26,7 @@ $Extra['categories'] = [
 
 echo $ThisRoute->render('banner.twig', $Extra);
 echo $ThisRoute->render('categorias.twig', $Extra);
-echo $ThisRoute->render('ads-banner.twig', $Extra);
-echo $ThisRoute->render('ads-cards.twig', $Extra);
+// echo $ThisRoute->render('ads-banner.twig', $Extra);
+// echo $ThisRoute->render('ads-cards.twig', $Extra);
 echo $ThisRoute->render('cta.twig', $Extra);
 unset($Extra['categories']);
