@@ -1,6 +1,7 @@
 <?php
+$Extra['date'] = date("Y");
 $Extra['footer'] = [
-    "Para empresas" => [
+    "Para Empresas" => [
         ['link' => BASE_ADMIN . 'login/', 'text' => 'Dashboard', 'target' => '_blank'],
         ['link' => BASE . 'conta/cadastre-se/', 'text' => 'Cadastre-se'],
     ],
@@ -14,7 +15,7 @@ $Extra['footer'] = [
         ['link' => BASE . 'produtos-e-servicos/', 'text' => 'Produtos e Serviços'],
         ['link' => BASE . 'empresar-a-z/', 'text' => 'Empresas de A a Z'],
     ],
-    "Institucional" => [
+    "links Úteis" => [
         ['link' => BASE_ADMIN . 'login/', 'text' => 'Área do cliente'],
         ['link' => BASE . 'trabalhe-conosco/', 'text' => 'Trabalhe conosco'],
         ['link' => BASE . 'duvidas-frequentes/', 'text' => 'Dúvidas frequentes'],
@@ -24,9 +25,8 @@ $Extra['footer'] = [
 ];
 
 $Extra['smm'] = [
-    ['link' => '#', 'target' => '_blank', 'class' => 'uk-icon-button', 'attr' => 'uk-icon="instagram"'],
-    ['link' => '#', 'target' => '_blank', 'class' => 'uk-icon-button', 'attr' => 'uk-icon="facebook"'],
-    ['link' => '#', 'target' => '_blank', 'class' => 'uk-icon-button', 'attr' => 'uk-icon="youtube"'],
+    ['link' => '#', 'target' => '_blank', 'class' => 'uk-icon-button', 'icon' => 'instagram'],
+    ['link' => '#', 'target' => '_blank', 'class' => 'uk-icon-button', 'icon' => 'facebook'],
+    ['link' => '#', 'target' => '_blank', 'class' => 'uk-icon-button', 'icon' => 'youtube'],
 ];
-
 echo $twig->render('footer.twig', $Extra);

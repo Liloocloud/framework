@@ -1,12 +1,23 @@
 <!-- WHATSAPP + BACK TO TOP -->
 <div>
-    <a href="#" class="liloo-backtotop" uk-totop uk-scroll></a>
+    <a href="#" class="text-white hover:text-[#30006B] bg-[#30006B] hover:bg-[#42AD00] py-6 px-5 rounded-full fixed bottom-8 right-8" uk-totop uk-scroll></a>
 </div>
 
 <!-- FOOTER -->
-<footer>
+<footer class="bg-[#110025]">
     <div class="uk-container uk-padding-large">
-        <div class="uk-grid-large uk-child-width-1-4@m" uk-grid>
+        <div class="uk-grid-large uk-child-width-1-5@m" uk-grid>
+
+            <div>
+                <h4 class="text-xl mb-4">Institucional</h4>
+                <p>{{ SITE_DESCRIPTION }}</p>
+                <div class="my-10">
+                    <img src="{{ BASE_UPLOADS }}root/logotipo-fundo-preto-a150px.png" alt="{{ SITE_NAME }}" title="{{ SITE_NAME }}" width="150px">
+                </div>
+                <div class="my-6">
+                    <img src="{{ BASE_UPLOADS }}footer/site-security.png" alt="Site seguro" title="Site seguro" width="140px">
+                </div>
+            </div>
 
             {% for key,value in footer %}
                 <div>
@@ -24,14 +35,10 @@
             <div>
                 <h4 class="text-xl mb-4">Redes Sociais</h4>
                 {% for item in smm %}
-                    <a href="{{ item.link }}" class="{{ item.class }}" target="{{ item.target }}" {{ item.attr }}>{{ item.text }}</a>
+                    <a href="{{ item.link }}" class="{{ item.class }}" target="{{ item.target }}" uk-icon="{{ item.icon }}"></a>
                 {% endfor %}                    
             </div>
             
-            <div class="uk-margin-large-top">
-                    <img src="{{ BASE_UPLOADS }}footer/site-security.png" alt="" width="140px">
-            </div>
-
         </div>
     </div>
 </footer>

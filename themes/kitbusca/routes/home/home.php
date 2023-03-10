@@ -8,9 +8,6 @@ $ThisRoute = new Environment($ThisRoute, [
     // 'cache' => ROOT . 'cache/'
 ]);
 
-$Ads = new Read(TB_ACCOUNTS);
-$Extra['accounts'] = $Ads->getArray(['account_plan' => 'free'], 1)['output'];
-$Extra['pagination'] = $Ads->Pagination()['output'];
 $Extra['categories'] = [
     ['img' => 'assistencia-tecnica.png', 'title' => 'Assistência Técnica'],
     ['img' => 'beleza.png', 'title' => 'Beleza e Spa'],
@@ -24,9 +21,13 @@ $Extra['categories'] = [
     ['img' => 'mais-categorias.png', 'title' => 'Mais'],
 ];
 
+// Listagem
+$Ads = new Read(TB_ACCOUNTS);
+$Extra['accounts'] = $Ads->getArray(['account_plan' => 'free'], 1)['output'];
+$Extra['pagination'] = $Ads->Pagination()['output'];
+
+
 echo $ThisRoute->render('banner.twig', $Extra);
 echo $ThisRoute->render('categorias.twig', $Extra);
-// echo $ThisRoute->render('ads-banner.twig', $Extra);
-// echo $ThisRoute->render('ads-cards.twig', $Extra);
 echo $ThisRoute->render('cta.twig', $Extra);
 unset($Extra['categories']);
