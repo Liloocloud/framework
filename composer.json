@@ -6,7 +6,8 @@
         "twig/twig": "^3.5",
         "monolog/monolog": "^2.9",
         "liloo/libraries": "^1.2",
-        "mercadopago/dx-php": "^2.5"
+        "mercadopago/dx-php": "^2.5",
+        "endroid/qr-code": "^4.6"
     },
     "config": {
         "vendor-dir": "_Kernel/Libs/"

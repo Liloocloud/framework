@@ -8,10 +8,18 @@
  * @version 2.0.0 - 03.06.2022
  */
 
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+
+$ThisRoute = new FilesystemLoader(ROOT_THEME_ROUTES . 'conta/');
+$ThisRoute = new Environment($ThisRoute, [
+    // 'cache' => ROOT . 'cache/'
+]);
+
 $Route = ROOT_THEME_ROUTES . 'conta/';
 $OneURL = isset(URL()[1]) ? URL()[1] : false;
 $TwoURL = isset(URL()[2]) ? URL()[2] : false;
-$Extra['date'] =  date("Y");
+$Extra['date'] = date("Y");
 
 if ($OneURL) {
 
@@ -23,10 +31,10 @@ if ($OneURL) {
     switch ($OneURL) {
         case $OneURL:
             if (file_exists($Route . $OneURL . '/' . $OneURL . '.php')) {
-                
-                if($TwoURL = 'cadastre-se'){
+
+                if ($TwoURL = 'cadastre-se') {
                     $Contract = new Helpers\Markdown();
-                    $Extra['contrato_markdow'] = $Contract->text(file_get_contents($Route . 'contrato.md'));
+                    $Extra['contrato_markdow'] = $Contract->text(file_get_contents(ROOT_UPLOADS . 'text/contrato.md'));
                 }
 
                 require_once $Route . $OneURL . '/' . $OneURL . '.php';

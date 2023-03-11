@@ -16,16 +16,20 @@
 </style>
 <div class="uk-grid-collapse uk-flex uk-flex-middle" uk-grid>
     <div class="liloo-login-sideone uk-width-1-2 uk-visible@m uk-text-center uk-padding-large uk-height-viewport">
-		<lottie-player src="#BASE_UPLOADS#animations/login.json" background="transparent" speed="1" style="width: 60%"  loop  autoplay></lottie-player>
-        <h3 class="uk-margin-remove">#SITE_TITLE#</h3>
-        <p class="uk-margin-remove">#SITE_DESCRIPTION#</p>
-        <p class="uk-margin-top uk-text-small">#SITE_NAME# &copy; #date#</p>
+		
+		{# <lottie-player src="{{ BASE_UPLOADS }}animations/login.json" background="transparent" speed="1" style="width: 60%"  loop autoplay></lottie-player> #}
+
+		<a href="#" onclick="clickLogo()" class="mb-20">
+				<img src="{{ BASE_UPLOADS }}root/logotipo-fundo-preto-a300px.png" alt="Cadastre-se" width="300px">
+			</a>
+        
+		<h3 class="uk-margin-remove">{{ SITE_TITLE }}</h3>
+        <p class="uk-margin-remove">{{ SITE_DESCRIPTION }}</p>
+        <p class="uk-margin-top uk-text-small">{{ SITE_NAME }} &copy; {{ date }}</p>
     </div>
     <div class="uk-width-1-2@m uk-animation-slide-left-medium">
         <div class="uk-padding">
-			<a href="#" onclick="clickLogo()">
-				<img src="#BASE_UPLOADS#root/logotipo.png" alt="Cadastre-se" width="120px">
-			</a>	
+				
 			<h1 class="uk-margin-top">Cadastre-se</h1>
 			<div uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium" class="uk-visible@s steps uk-margin">			
 				<button disabled class="step-status-1 check" type="button">1º<br>Passo</button>
@@ -90,7 +94,7 @@
 							<button class="uk-button uk-button-primary" type="submit">Criar Conta</button>
 						</div>
 					</form>
-					<a href="#BASE#conta/login/" class="uk-margin-large-top">Já tenho uma conta</a>
+					<a href="{{ BASE }}conta/login/" class="uk-margin-large-top">Já tenho uma conta</a>
 				</li>
 				
 				<!-- 2º Passo (Validando a conta) -->			
@@ -136,7 +140,7 @@
 					<h3>Sua conta foi criado com sucesso! <br>
 						Vamos te redirecionar para o login</h5>
 					<p>Use o e-mail e senha que você criou para começar a anunciar!</p>
-					<a href="#BASE#conta/login/" class="uk-button-link">Já tenho uma conta</a>
+					<a href="{{ BASE }}conta/login/" class="uk-button-link">Já tenho uma conta</a>
 				</li>
 
 			</ul>
