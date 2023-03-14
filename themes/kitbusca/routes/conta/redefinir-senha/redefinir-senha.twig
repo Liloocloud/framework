@@ -1,22 +1,20 @@
-<style>
-    h1 { font-size: 32px !important; }
-</style>
 <div class="uk-grid-collapse uk-flex uk-flex-middle" uk-grid>
+    
     <div class="liloo-login-sideone uk-width-1-2 uk-visible@m uk-text-center uk-padding-large uk-height-viewport">
-        <lottie-player src="#BASE_UPLOADS#animations/login.json" background="transparent" speed="1"
-            style="width: 60%" loop autoplay></lottie-player>
-        <h3 class="uk-margin-remove">#SITE_TITLE#</h3>
-        <p class="uk-margin-remove">#SITE_DESCRIPTION#</p>
-        <p class="uk-margin-top uk-text-small">#SITE_NAME# &copy; #date#</p>
+		<a href="#" onclick="clickLogo()" class="mb-20">
+			<img src="{{ BASE_UPLOADS }}root/logotipo-fundo-preto-a300px.png" alt="Cadastre-se" width="300px">
+		</a>       
+		<h3 class="uk-margin-remove">{{ SITE_TITLE }}</h3>
+        <p class="uk-margin-remove">{{ SITE_DESCRIPTION }}</p>
+        <p class="uk-margin-top uk-text-small">{{ SITE_NAME }} &copy; {{ date }}</p>
     </div>
+
     <div class="uk-width-1-2@m uk-animation-slide-left-medium">
         <div class="uk-padding">
-            <a href="#" onclick="clickLogo()">
-				<img src="#BASE_UPLOADS#root/logotipo.png" alt="Cadastre-se" width="120px">
-			</a>
-            <h1 class="uk-margin-top">Redefinição de Senha</h1>
-            <h3>Vamos enviar instruções de recuperação <br>
-                para o seu e-mail.</h3>
+
+            <h1 class="text-[26px] mb-2">Redefinição de Senha</h1>
+            <p>Vamos enviar instruções de recuperação <br>
+                para o seu e-mail.</p>
 
             <form id="password-redefine" autocomplete="off" class="uk-margin-bottom">
                 <div>
@@ -42,8 +40,8 @@
             </form>
 
             <div class="uk-margin-large-top">
-                <a href="#BASE#conta/login/">Já tenho uma conta</a>
-                <h5 class="uk-margin-top">Não possui um conta? <a href="#BASE#conta/cadastre-se/">Cadastre-se</a></h5>
+                <a href="{{ BASE }}conta/login/">Já tenho uma conta</a>
+                <h5 class="uk-margin-top">Não possui um conta? <a href="{{ BASE }}conta/cadastre-se/">Cadastre-se</a></h5>
             </div>
 
 

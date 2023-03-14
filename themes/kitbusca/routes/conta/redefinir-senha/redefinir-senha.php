@@ -1,3 +1,2 @@
 <?php
-
-_tpl_fill($Route . $OneURL . '/redefinir-senha.tpl', $Extra, '');
+echo $ThisRoute->render('redefinir-senha/redefinir-senha.twig', $Extra);

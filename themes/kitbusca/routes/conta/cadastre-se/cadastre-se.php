@@ -14,7 +14,6 @@
 
 // $Extra['account_plan'] = (string) URL()[2];
 
-
 echo $ThisRoute->render('cadastre-se/cadastre-se.twig', $Extra);
 
 // _tpl_fill($Route . $OneURL . '/cadastre-se.tpl', $Extra, '');

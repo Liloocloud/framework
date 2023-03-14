@@ -1,7 +1,18 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap'); */
-
 @layer utilities {
     .content-auto {
         content-visibility: auto;
     }
+    
+}
+
+@layer components {
+    .liloo-button {
+        @apply bg-primary text-white rounded px-5 py-2 font-semibold;
+    }
+}
+
+@layer base {
+    html {
+        font-family: 'Roboto', system-ui, sans-serif;
+    }   
 }

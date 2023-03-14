@@ -7,5 +7,5 @@ if(isset($_GET['user'])){
 
 ob_start();
 session_destroy();
-_tpl_fill($Route . $OneURL . '/login.tpl', $Extra, '');
+echo $ThisRoute->render('login/login.twig', $Extra);
 ob_end_flush();

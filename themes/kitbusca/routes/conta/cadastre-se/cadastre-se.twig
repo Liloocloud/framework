@@ -1,36 +1,18 @@
-<style>
-    .liloo-login-sideone {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #03475A;
-        flex-direction: column;
-    }
-    .liloo-login-sideone h3,
-    .liloo-login-sideone p{
-        color: #efefef;
-    }
-    h1{
-        font-size: 32px !important;
-    }
-</style>
 <div class="uk-grid-collapse uk-flex uk-flex-middle" uk-grid>
-    <div class="liloo-login-sideone uk-width-1-2 uk-visible@m uk-text-center uk-padding-large uk-height-viewport">
-		
-		{# <lottie-player src="{{ BASE_UPLOADS }}animations/login.json" background="transparent" speed="1" style="width: 60%"  loop autoplay></lottie-player> #}
-
+    
+	<div class="liloo-login-sideone uk-width-1-2 uk-visible@m uk-text-center uk-padding-large uk-height-viewport">
 		<a href="#" onclick="clickLogo()" class="mb-20">
-				<img src="{{ BASE_UPLOADS }}root/logotipo-fundo-preto-a300px.png" alt="Cadastre-se" width="300px">
-			</a>
-        
+			<img src="{{ BASE_UPLOADS }}root/logotipo-fundo-preto-a300px.png" alt="Cadastre-se" width="300px">
+		</a>       
 		<h3 class="uk-margin-remove">{{ SITE_TITLE }}</h3>
         <p class="uk-margin-remove">{{ SITE_DESCRIPTION }}</p>
         <p class="uk-margin-top uk-text-small">{{ SITE_NAME }} &copy; {{ date }}</p>
     </div>
+
     <div class="uk-width-1-2@m uk-animation-slide-left-medium">
         <div class="uk-padding">
 				
-			<h1 class="uk-margin-top">Cadastre-se</h1>
+			<h1 class="text-[26px] mb-2">Cadastre-se</h1>
 			<div uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium" class="uk-visible@s steps uk-margin">			
 				<button disabled class="step-status-1 check" type="button">1º<br>Passo</button>
 				<button disabled class="step-status-2" type="button">2º<br>Passo</button>
@@ -85,7 +67,7 @@
 							</div>
 							<div class="uk-margin">
 								<div class="uk-inline uk-width-1-2@m">
-									<label><input class="uk-checkbox" type="checkbox" name="account_accept_terms" require>&nbsp; Ao criar uma conta na #SITE_NAME# está a concordar com os nossos <a href="#modal-overflow" uk-toggle>Termos e Condições de uso</a></label>
+									<label><input class="uk-checkbox" type="checkbox" name="account_accept_terms" require>&nbsp; Ao criar uma conta na {{ SITE_NAME }} está a concordar com os nossos <a href="#modal-overflow" uk-toggle>Termos e Condições de uso</a></label>
 								</div>
 							</div>
 						</div>
